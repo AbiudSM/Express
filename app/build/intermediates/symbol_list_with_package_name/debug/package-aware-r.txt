@@ -1492,6 +1492,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable selector
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1596,7 +1597,6 @@ id clip_vertical
 id collapseActionView
 id confirm_button
 id container
-id container_frame
 id content
 id contentPanel
 id contrasena
@@ -1804,6 +1804,7 @@ id textView5
 id textView6
 id textView7
 id textView8
+id textView9
 id textViewInfo
 id text_input_end_icon
 id text_input_start_icon
@@ -1909,9 +1910,11 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_bienvenida
+layout activity_contactos
 layout activity_inicio
 layout activity_inicio_sesion_exitoso
 layout activity_main
+layout activity_mi_perfil
 layout activity_ofrecer_servicio
 layout activity_ofrecer_servicio2
 layout activity_registrarse
@@ -1932,9 +1935,6 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout fragment_account
-layout fragment_contacts
-layout fragment_home
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title

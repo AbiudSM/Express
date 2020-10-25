@@ -11,11 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SolicitarServicioActivity"
-            android:parentActivityName=".BienvenidaActivity"></activity>
+        <activity android:name=".ContactosActivity"></activity>
+        <activity android:name=".MiPerfilActivity" />
+        <activity
+            android:name=".SolicitarServicioActivity"
+            android:parentActivityName=".BienvenidaActivity" />
         <activity android:name=".OfrecerServicio2Activity" />
-        <activity android:name=".OfrecerServicioActivity"
-            android:parentActivityName=".BienvenidaActivity"/>
+        <activity
+            android:name=".OfrecerServicioActivity"
+            android:parentActivityName=".BienvenidaActivity" />
         <activity android:name=".BienvenidaActivity" />
         <activity android:name=".InicioActivity" />
         <activity android:name=".InicioSesionExitoso" />
