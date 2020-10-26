@@ -1791,7 +1791,6 @@ id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
 id test_radiobutton_app_button_tint
-id texsaddsatView16
 id text
 id text1
 id text2
@@ -1840,7 +1839,6 @@ id txt_cotizacion
 id txt_cotizacion_perfil
 id txt_descripcion
 id txt_descripcion_perfil
-id txt_descripssadcion_perfil
 id txt_nombre
 id txt_nombre_perfil
 id txt_nombre_ss
