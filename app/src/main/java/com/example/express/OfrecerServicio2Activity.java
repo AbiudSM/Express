@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import com.example.express.models.Usuario;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -27,6 +29,8 @@ public class OfrecerServicio2Activity extends AppCompatActivity {
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
 
 
     @Override
@@ -61,6 +65,7 @@ public class OfrecerServicio2Activity extends AppCompatActivity {
     }
 
     private void UpdateUser() {
+        String uid = user.getUid();
         String nombre = userNombre.getText().toString();
         String profesion = userProfesion.getText().toString();
         String servicios = userServicios.getText().toString();
@@ -69,7 +74,7 @@ public class OfrecerServicio2Activity extends AppCompatActivity {
         String descripcion = getIntent().getStringExtra("descripcionSend");
 
         Usuario u = new Usuario();
-        u.setUid(UUID.randomUUID().toString());
+        u.setUid(uid);
         u.setNombre(nombre);
         u.setCotizacion(cotizacion);
         u.setProfesion(profesion);

@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import com.example.express.models.Usuario;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -23,6 +25,7 @@ public class SolicitarServicioActivity extends AppCompatActivity {
     public boolean band = true;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,11 +74,12 @@ public class SolicitarServicioActivity extends AppCompatActivity {
     }
 
     private void UpdateUser() {
+        String uid = user.getUid();
         String nombre = userNombre.getText().toString();
         String telefono = userTelefono.getText().toString();
 
         Usuario u = new Usuario();
-        u.setUid(UUID.randomUUID().toString());
+        u.setUid(uid);
         u.setNombre(nombre);
         u.setTelefono(telefono);
 
