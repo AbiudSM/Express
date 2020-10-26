@@ -50,9 +50,9 @@
             android:layout_height="251dp"
             android:background="#EBFFFD"
             android:ems="10"
-            android:gravity="top"
             android:hint="Descripción"
-            android:inputType="textLongMessage" />
+            android:gravity="start|top"
+            android:inputType="textMultiLine" />
 
         <Space
             android:layout_width="match_parent"

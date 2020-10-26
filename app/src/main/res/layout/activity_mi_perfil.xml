@@ -8,28 +8,172 @@
     android:fitsSystemWindows="true"
     tools:context=".MiPerfilActivity">
 
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="60dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Activity mi perfil"
-            android:textColor="@color/colorWhite"
-            android:textSize="40dp" />
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Activity mi perfil"
+                android:textColor="@color/colorWhite"
+                android:textSize="40dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity=""
+                android:text="Nombre"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/txt_nombre_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:background="#EBFFFD"
+                android:hint="Mi nombre" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity=""
+                android:text="Teléfono"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/txt_telefono_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="phone"
+                android:background="#EBFFFD"
+                android:hint="Mi telefóno" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity=""
+                android:text="Profesión"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/txt_profesion_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:background="#EBFFFD"
+                android:hint="Mi profesión" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity=""
+                android:text="Servicios"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/txt_servicios_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:background="#EBFFFD"
+                android:hint="Servicios que ofrezco" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity=""
+                android:text="Cotización"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/txt_cotizacion_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:background="#EBFFFD"
+                android:hint="Cotización base por trabajo" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity=""
+                android:text="Descripción"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/txt_descripcion_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#EBFFFD"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Descripción sobre el trabajo que ofrezco"
+                android:inputType="textMultiLine" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
