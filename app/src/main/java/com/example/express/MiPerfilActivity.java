@@ -7,8 +7,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.express.models.Usuario;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -29,6 +32,7 @@ public class MiPerfilActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     EditText userNombre, userTelefono, userProfesion, userServicios, userCotizacion, userDescripcion;
+    Button mbtn_guardar_cambios;
     public String uid = user.getUid();
 
     @Override
@@ -45,9 +49,17 @@ public class MiPerfilActivity extends AppCompatActivity {
         userServicios = findViewById(R.id.txt_servicios_perfil);
         userCotizacion = findViewById(R.id.txt_cotizacion_perfil);
         userDescripcion = findViewById(R.id.txt_descripcion_perfil);
+        mbtn_guardar_cambios = findViewById(R.id.btn_guardar_cambios);
 
         inicializarFirebase();
         MostrarDatos();
+
+        mbtn_guardar_cambios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                UpdateUser();
+            }
+        });
 
         mBottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -118,5 +130,28 @@ public class MiPerfilActivity extends AppCompatActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void UpdateUser() {
+        String uid = user.getUid();
+        String nombre = userNombre.getText().toString();
+        String profesion = userProfesion.getText().toString();
+        String servicios = userServicios.getText().toString();
+        String cotizacion = userCotizacion.getText().toString();
+        String telefono = userTelefono.getText().toString();
+        String descripcion = userDescripcion.getText().toString();
+
+        Usuario newUserData = new Usuario();
+        newUserData.setUid(uid);
+        newUserData.setNombre(nombre);
+        newUserData.setCotizacion(cotizacion);
+        newUserData.setProfesion(profesion);
+        newUserData.setServicios(servicios);
+        newUserData.setTelefono(telefono);
+        newUserData.setDescripcion(descripcion);
+
+        databaseReference.child("Usuario").child(newUserData.getUid()).setValue(newUserData);
+
+        Toast.makeText(this, "Usuario Actualizado", Toast.LENGTH_SHORT).show();
     }
 }
