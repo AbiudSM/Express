@@ -24,6 +24,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.HashMap;
+
 public class MiPerfilActivity extends AppCompatActivity {
 
     BottomNavigationView mBottomNavigationView;
@@ -141,16 +143,16 @@ public class MiPerfilActivity extends AppCompatActivity {
         String telefono = userTelefono.getText().toString();
         String descripcion = userDescripcion.getText().toString();
 
-        Usuario newUserData = new Usuario();
-        newUserData.setUid(uid);
-        newUserData.setNombre(nombre);
-        newUserData.setCotizacion(cotizacion);
-        newUserData.setProfesion(profesion);
-        newUserData.setServicios(servicios);
-        newUserData.setTelefono(telefono);
-        newUserData.setDescripcion(descripcion);
+        HashMap hashMap = new HashMap();
+        hashMap.put("nombre",nombre);
+        hashMap.put("profesion",profesion);
+        hashMap.put("servicios",servicios);
+        hashMap.put("cotizacion",cotizacion);
+        hashMap.put("telefono",telefono);
+        hashMap.put("descripcion",descripcion);
 
-        databaseReference.child("Usuario").child(newUserData.getUid()).setValue(newUserData);
+
+        databaseReference.child("Usuario").child(uid).updateChildren(hashMap);
 
         Toast.makeText(this, "Usuario Actualizado", Toast.LENGTH_SHORT).show();
     }

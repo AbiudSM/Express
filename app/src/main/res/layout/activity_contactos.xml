@@ -27,6 +27,11 @@
             android:text="Activity Contactos"
             android:textColor="@color/colorWhite"
             android:textSize="40dp" />
+
+        <ListView
+            android:id="@+id/lv_contactos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

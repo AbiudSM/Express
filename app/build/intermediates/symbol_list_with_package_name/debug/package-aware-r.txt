@@ -1576,6 +1576,7 @@ id btnSignOut
 id btn_OfrecerServicio
 id btn_SolicitarServicio
 id btn_avanzar
+id btn_guardar_cambios
 id buttonPanel
 id cancel_action
 id cancel_button
@@ -1666,6 +1667,7 @@ id line3
 id linearLayout
 id listMode
 id list_item
+id lv_contactos
 id lv_datosUsuarios
 id masked
 id media_actions
