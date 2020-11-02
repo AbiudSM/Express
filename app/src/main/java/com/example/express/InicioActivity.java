@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.solver.widgets.Snapshot;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,11 +17,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.express.models.Contactos;
 import com.example.express.models.Usuario;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
@@ -28,6 +34,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,9 +47,9 @@ public class InicioActivity extends AppCompatActivity {
     DatabaseReference databaseReference;
 
     ListView listV_usuarios;
-    private List<Usuario> listUsuario = new ArrayList<Usuario>();
-    ArrayAdapter<Usuario> arrayAdapterUsuario;
     Usuario usuarioSelected;
+
+    private RecyclerView mBlogList;
 
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     public String uid = user.getUid();
@@ -54,33 +61,14 @@ public class InicioActivity extends AppCompatActivity {
 
         mBottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         mBottomNavigationView.setSelectedItemId((R.id.menu_home));
-        listV_usuarios = findViewById(R.id.lv_datosUsuarios);
 
         inicializarFirebase();
-        ListarDatos();
 
-        listV_usuarios.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Detectar el id del usuario seleccionado
-                usuarioSelected = (Usuario) parent.getItemAtPosition(position);
-                String usuarioContactosId = usuarioSelected.getUid();
-                String usuarioContactosNombre = usuarioSelected.getNombre();
-
-                // Almacenar el id del contacto en la clase Usuario.contactosId
-                Contactos c = new Contactos();
-                c.setContactoId(usuarioContactosId);
-                c.setNombre(usuarioContactosNombre);
-                c.setProfesion(usuarioSelected.getProfesion());
-                c.setTelefono(usuarioSelected.getTelefono());
-
-                //Crear child contactos
-                databaseReference.child("Usuario").child(uid).child("Contactos").child(usuarioContactosId).setValue(c);
-
-                Toast.makeText(InicioActivity.this, "Usuario guardado en contactos", Toast.LENGTH_SHORT).show();
-
-            }
-        });
+        //RecyclerView
+        databaseReference.keepSynced(true);
+        mBlogList = (RecyclerView) findViewById(R.id.myRecyclerView);
+        mBlogList.setHasFixedSize(true);
+        mBlogList.setLayoutManager(new LinearLayoutManager(this));
 
         mBottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -103,25 +91,45 @@ public class InicioActivity extends AppCompatActivity {
         });
     }// Fin on Create
 
-    private void ListarDatos() {
-        databaseReference.child("Usuario").addValueEventListener(new ValueEventListener() {
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseRecyclerAdapter<Usuario,UsuarioViewHolder>firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Usuario, UsuarioViewHolder>
+                (Usuario.class,R.layout.blog_row,UsuarioViewHolder.class,databaseReference.child("Usuario")) {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                listUsuario.clear();
-                for (DataSnapshot objSnapshot : snapshot.getChildren()) {
-                    Usuario u = objSnapshot.getValue(Usuario.class);
-                    listUsuario.add(u);
-
-                    arrayAdapterUsuario = new ArrayAdapter<Usuario>(getApplicationContext(), R.layout.my_list, listUsuario);
-                    listV_usuarios.setAdapter(arrayAdapterUsuario);
-                }
+            protected void populateViewHolder(UsuarioViewHolder usuarioViewHolder, Usuario usuario, int i) {
+                usuarioViewHolder.setNombre(usuario.getNombre());
+                usuarioViewHolder.setProfesion(usuario.getProfesion());
+                usuarioViewHolder.setDescripcion(usuario.getDescripcion());
+                //usuarioViewHolder.setImagen(getApplicationContext(),usuario.getImagen());
             }
+        };
+        mBlogList.setAdapter(firebaseRecyclerAdapter);
+    }// Fin onStart
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
+    public static class UsuarioViewHolder extends RecyclerView.ViewHolder{
+        View mView;
+        public UsuarioViewHolder(View itemView){
+            super(itemView);
+            mView=itemView;
+        }
+        public void setNombre(String nombre){
+            TextView card_nombre = (TextView)mView.findViewById(R.id.cardNombre);
+            card_nombre.setText(nombre);
+        }
+        public void setProfesion(String profesion){
+            TextView card_profesion = (TextView)mView.findViewById(R.id.cardProfesion);
+            card_profesion.setText(profesion);
+        }
+        public void setDescripcion(String descripcion){
+            TextView card_descripcion = (TextView)mView.findViewById(R.id.cardDescripcion);
+            card_descripcion.setText(descripcion);
+        }
+        public void setImagen(String imagen){
+            ImageView card_imagen = (ImageView)mView.findViewById(R.id.cardImage);
+            Picasso.get().load(imagen).into(card_imagen);
+        }
     }
 
 
@@ -156,20 +164,23 @@ public class InicioActivity extends AppCompatActivity {
 }
 
 /*
-SIGN OUT
-    private Button btn_cerrar;
-    FirebaseAuth mAuth;
-    btn_cerrar = (Button) findViewById(R.id.btn_cerrar_sesion);
+Detectar el id del usuario seleccionado
 
-    //Detectar al usuario actual
-    mAuth = FirebaseAuth.getInstance();
 
-        btn_cerrar.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(InicioActivity.this,MainActivity.class));
-        }
-    });
+    usuarioSelected = usuario.getUid();
+    String usuarioContactosId = usuarioSelected.getUid();
+    String usuarioContactosNombre = usuarioSelected.getNombre();
+
+    // Almacenar el id del contacto en la clase Usuario.contactosId
+    Contactos c = new Contactos();
+    c.setContactoId(usuarioContactosId);
+    c.setNombre(usuarioContactosNombre);
+    c.setProfesion(usuarioSelected.getProfesion());
+    c.setTelefono(usuarioSelected.getTelefono());
+
+    //Crear child contactos
+    databaseReference.child("Usuario").child(uid).child("Contactos").child(usuarioContactosId).setValue(c);
+
+    Toast.makeText(InicioActivity.this, "Usuario guardado en contactos", Toast.LENGTH_SHORT).show();
 
 */

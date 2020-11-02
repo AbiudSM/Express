@@ -1580,6 +1580,11 @@ id btn_guardar_cambios
 id buttonPanel
 id cancel_action
 id cancel_button
+id cardDescripcion
+id cardGuardar
+id cardImage
+id cardNombre
+id cardProfesion
 id center
 id center_horizontal
 id center_vertical
@@ -1665,10 +1670,10 @@ id light
 id line1
 id line3
 id linearLayout
+id linearLayout2
 id listMode
 id list_item
 id lv_contactos
-id lv_datosUsuarios
 id masked
 id media_actions
 id menu_account
@@ -1705,6 +1710,7 @@ id mtrl_picker_text_input_range_end
 id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
+id myRecyclerView
 id navigation_header_container
 id never
 id noScroll
@@ -1935,6 +1941,7 @@ layout activity_ofrecer_servicio
 layout activity_ofrecer_servicio2
 layout activity_registrarse
 layout activity_solicitar_servicio
+layout blog_row
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

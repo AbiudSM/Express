@@ -30,11 +30,15 @@
             android:text="Activity Inicio"
             android:textColor="@color/colorWhite"
             android:textSize="40dp" />
-
-        <ListView
-            android:id="@+id/lv_datosUsuarios"
+        
+        <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:id="@+id/myRecyclerView">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
