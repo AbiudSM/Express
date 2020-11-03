@@ -16,6 +16,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
 import java.util.UUID;
 
 public class SolicitarServicioActivity extends AppCompatActivity {
@@ -78,11 +79,10 @@ public class SolicitarServicioActivity extends AppCompatActivity {
         String nombre = userNombre.getText().toString();
         String telefono = userTelefono.getText().toString();
 
-        Usuario u = new Usuario();
-        u.setUid(uid);
-        u.setNombre(nombre);
-        u.setTelefono(telefono);
+        HashMap hashMap = new HashMap();
+        hashMap.put("nombre",nombre);
+        hashMap.put("telefono",telefono);
 
-        databaseReference.child("Usuario").child(u.getUid()).setValue(u);
+        databaseReference.child("Usuario").child(uid).setValue(hashMap);
     }
 }

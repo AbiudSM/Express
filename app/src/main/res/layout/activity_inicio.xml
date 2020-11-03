@@ -30,10 +30,12 @@
             android:text="Activity Inicio"
             android:textColor="@color/colorWhite"
             android:textSize="40dp" />
-        
+
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:scrollbars="vertical"
             android:id="@+id/myRecyclerView">
 

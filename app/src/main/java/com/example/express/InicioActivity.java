@@ -96,7 +96,7 @@ public class InicioActivity extends AppCompatActivity {
         super.onStart();
 
         FirebaseRecyclerAdapter<Usuario,UsuarioViewHolder>firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Usuario, UsuarioViewHolder>
-                (Usuario.class,R.layout.blog_row,UsuarioViewHolder.class,databaseReference.child("Usuario")) {
+                (Usuario.class,R.layout.blog_row,UsuarioViewHolder.class,databaseReference.child("Usuario").orderByChild("profesion").startAt("")) {
             @Override
             protected void populateViewHolder(UsuarioViewHolder usuarioViewHolder, Usuario usuario, int i) {
                 usuarioViewHolder.setNombre(usuario.getNombre());
