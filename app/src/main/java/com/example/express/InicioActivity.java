@@ -102,7 +102,7 @@ public class InicioActivity extends AppCompatActivity {
                 usuarioViewHolder.setNombre(usuario.getNombre());
                 usuarioViewHolder.setProfesion(usuario.getProfesion());
                 usuarioViewHolder.setDescripcion(usuario.getDescripcion());
-                //usuarioViewHolder.setImagen(getApplicationContext(),usuario.getImagen());
+                usuarioViewHolder.setImagen(getApplicationContext(),usuario.getImagen());
             }
         };
         mBlogList.setAdapter(firebaseRecyclerAdapter);
@@ -126,7 +126,7 @@ public class InicioActivity extends AppCompatActivity {
             TextView card_descripcion = (TextView)mView.findViewById(R.id.cardDescripcion);
             card_descripcion.setText(descripcion);
         }
-        public void setImagen(String imagen){
+        public void setImagen(Context applicationContext, String imagen){
             ImageView card_imagen = (ImageView)mView.findViewById(R.id.cardImage);
             Picasso.get().load(imagen).into(card_imagen);
         }

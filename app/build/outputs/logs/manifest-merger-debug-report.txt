@@ -1,14 +1,14 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-36:12
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-39:12
 MERGED from [com.firebaseui:firebase-ui-database:0.4.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\91550f654927fd460f396a68922abb3c\jetified-firebase-ui-database-0.4.0\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.firebase:firebase-database:19.5.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\2e4ccb7969f494686450358e4a1c1ade\jetified-firebase-database-19.5.0\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\aac464be750fe7e42c6e3ef59b1c2d74\jetified-firebase-storage-19.2.0\AndroidManifest.xml:15:1-39:12
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bbebf41a6ba767929544d566df125e46\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\a476ee8650c0f9e7654e5f9f2c3718dc\material-1.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.8.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\e4646426cdddc65da733a3ef52a53a76\jetified-android-image-cropper-2.8.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\396e7ddea1addefd32f4f3d87ec48909\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\d5fde9b470ca241c13fa0641ca95ae4a\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.gms:play-services-auth:18.1.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bc0e002cee3c62e9d228887e35f0b209\jetified-play-services-auth-18.1.0\AndroidManifest.xml:17:1-40:12
@@ -18,12 +18,13 @@ MERGED from [com.google.firebase:firebase-analytics:17.5.0] C:\Users\rober\.grad
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\305c2898fe2457e82c9da2257c2bc0a1\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\8d8a8abf56b0acf243894e5c793a7480\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\adb371d4d53f86eab98a28717d70cc7e\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bbebf41a6ba767929544d566df125e46\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
+MERGED from [id.zelory:compressor:2.1.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\2cf704239199184ee824fdcb4065513b\jetified-compressor-2.1.0\AndroidManifest.xml:2:1-12:12
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\002708d22968cd54df02d5dfedd6cae2\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.android.gms:play-services-measurement-api:17.5.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\35f10b9aa3282e0c4ce3ae644ab33b75\jetified-play-services-measurement-api-17.5.0\AndroidManifest.xml:17:1-36:12
 MERGED from [com.google.firebase:firebase-installations:16.3.2] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\4d2d6e18a23e71677122246f9e56e667\jetified-firebase-installations-16.3.2\AndroidManifest.xml:2:1-23:12
 MERGED from [com.google.firebase:firebase-common:19.3.1] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\9263446f4e667a45eb7a42eb61ed3210\jetified-firebase-common-19.3.1\AndroidManifest.xml:15:1-40:12
 MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\626cd0cdd86577b53b05b9ceb0f9a7ca\jetified-firebase-components-16.0.0\AndroidManifest.xml:15:1-23:12
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\34d8e6fccc0ab5b895e5ef716d51459c\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\226817fd352d0debd037c03d8ec9b5c1\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\705071dba30571a9226503cb1f0dac80\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database-collection:17.0.1] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\dbe13819e3ebf098a865ce8aedc31d6e\jetified-firebase-database-collection-17.0.1\AndroidManifest.xml:2:1-9:12
@@ -59,6 +60,7 @@ MERGED from [androidx.customview:customview:1.0.0] C:\Users\rober\.gradle\caches
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\db6ea2a636bcb3ab9eb7b581c5db983e\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\ccd497c0d55509e00fa2c4ec5a0ae967\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.2.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\e5357b0b880d2be0ed83398576c19d42\core-1.2.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\34d8e6fccc0ab5b895e5ef716d51459c\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\324b5866ad2c13339651997b434b41f3\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\6ca55331635d9ca1071738b385928a75\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\d5fd7fbc692311a845217063332ce16c\print-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -70,20 +72,20 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\rober\.gradle
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\b77454809810e03ad1b0b8586694d509\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\59b723f090061559cc5b6f12f2aff3bc\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\ae891c337b2dc8d7a559b90a3711f662\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-39:12
 	package
 		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:3:5-34
 		INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-36:12
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-39:12
 		INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-36:12
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-39:12
 		INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:11-69
@@ -107,14 +109,20 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.5.0] C:
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.5.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\cd1ec5d99f4fdc26521eac46eeaab1a6\jetified-play-services-measurement-sdk-api-17.5.0\AndroidManifest.xml:23:5-67
 	android:name
 		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:5:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:6:5-80
+	android:name
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:6:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:7:22-77
 application
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:7:5-34:19
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:9:5-37:19
 MERGED from [com.google.firebase:firebase-database:19.5.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\2e4ccb7969f494686450358e4a1c1ade\jetified-firebase-database-19.5.0\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-database:19.5.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\2e4ccb7969f494686450358e4a1c1ade\jetified-firebase-database-19.5.0\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\aac464be750fe7e42c6e3ef59b1c2d74\jetified-firebase-storage-19.2.0\AndroidManifest.xml:29:5-37:19
 MERGED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\aac464be750fe7e42c6e3ef59b1c2d74\jetified-firebase-storage-19.2.0\AndroidManifest.xml:29:5-37:19
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bbebf41a6ba767929544d566df125e46\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bbebf41a6ba767929544d566df125e46\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\a476ee8650c0f9e7654e5f9f2c3718dc\material-1.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\a476ee8650c0f9e7654e5f9f2c3718dc\material-1.2.1\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\d5fde9b470ca241c13fa0641ca95ae4a\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
@@ -125,6 +133,8 @@ MERGED from [com.google.firebase:firebase-auth:19.3.2] C:\Users\rober\.gradle\ca
 MERGED from [com.google.firebase:firebase-auth:19.3.2] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\16a303518ddb9c4f6d04d81a3a04d0b3\jetified-firebase-auth-19.3.2\AndroidManifest.xml:23:5-40:19
 MERGED from [com.google.firebase:firebase-analytics:17.5.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\3f8c42246e249ac7f9db8e590b0ba415\jetified-firebase-analytics-17.5.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:17.5.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\3f8c42246e249ac7f9db8e590b0ba415\jetified-firebase-analytics-17.5.0\AndroidManifest.xml:7:5-20
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bbebf41a6ba767929544d566df125e46\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bbebf41a6ba767929544d566df125e46\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\002708d22968cd54df02d5dfedd6cae2\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\002708d22968cd54df02d5dfedd6cae2\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.android.gms:play-services-measurement-api:17.5.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\35f10b9aa3282e0c4ce3ae644ab33b75\jetified-play-services-measurement-api-17.5.0\AndroidManifest.xml:26:5-34:19
@@ -160,71 +170,75 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\ro
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.2.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\e5357b0b880d2be0ed83398576c19d42\core-1.2.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:10:9-41
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:12:9-41
 	android:roundIcon
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:11:9-54
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:13:9-54
 	android:icon
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:9:9-43
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:8:9-35
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:13:9-40
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:15:9-40
+activity#com.example.express.SubirImagenActivity
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:16:9-66
+	android:name
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:16:19-54
 activity#com.example.express.ContactosActivity
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:14:9-64
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:17:9-55
 	android:name
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:14:19-52
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:17:19-52
 activity#com.example.express.MiPerfilActivity
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:15:9-54
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:18:9-54
 	android:name
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:15:19-51
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:18:19-51
 activity#com.example.express.SolicitarServicioActivity
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:16:9-18:64
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:19:9-21:64
 	android:parentActivityName
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:18:13-61
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:21:13-61
 	android:name
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:17:13-54
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:20:13-54
 activity#com.example.express.OfrecerServicio2Activity
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:19:9-62
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:22:9-62
 	android:name
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:19:19-59
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:22:19-59
 activity#com.example.express.OfrecerServicioActivity
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:20:9-22:64
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:23:9-25:64
 	android:parentActivityName
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:22:13-61
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:25:13-61
 	android:name
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:21:13-52
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:24:13-52
 activity#com.example.express.BienvenidaActivity
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:23:9-56
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:26:9-56
 	android:name
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:23:19-53
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:26:19-53
 activity#com.example.express.InicioActivity
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:24:9-52
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:27:9-52
 	android:name
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:24:19-49
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:27:19-49
 activity#com.example.express.InicioSesionExitoso
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:25:9-57
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:28:9-57
 	android:name
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:25:19-54
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:28:19-54
 activity#com.example.express.RegistrarseActivity
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:26:9-57
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:29:9-57
 	android:name
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:26:19-54
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:29:19-54
 activity#com.example.express.MainActivity
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:27:9-33:20
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:30:9-36:20
 	android:name
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:27:19-47
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:30:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:28:13-32:29
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:31:13-35:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:29:17-69
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:32:17-69
 	android:name
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:29:25-66
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:32:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:31:17-77
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:34:17-77
 	android:name
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:31:27-74
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:34:27-74
 uses-sdk
 INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml
@@ -235,10 +249,10 @@ MERGED from [com.google.firebase:firebase-database:19.5.0] C:\Users\rober\.gradl
 MERGED from [com.google.firebase:firebase-database:19.5.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\2e4ccb7969f494686450358e4a1c1ade\jetified-firebase-database-19.5.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\aac464be750fe7e42c6e3ef59b1c2d74\jetified-firebase-storage-19.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\aac464be750fe7e42c6e3ef59b1c2d74\jetified-firebase-storage-19.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bbebf41a6ba767929544d566df125e46\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bbebf41a6ba767929544d566df125e46\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\a476ee8650c0f9e7654e5f9f2c3718dc\material-1.2.1\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\a476ee8650c0f9e7654e5f9f2c3718dc\material-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.8.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\e4646426cdddc65da733a3ef52a53a76\jetified-android-image-cropper-2.8.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.8.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\e4646426cdddc65da733a3ef52a53a76\jetified-android-image-cropper-2.8.0\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\396e7ddea1addefd32f4f3d87ec48909\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\396e7ddea1addefd32f4f3d87ec48909\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\d5fde9b470ca241c13fa0641ca95ae4a\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
@@ -257,6 +271,10 @@ MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\rober\.gradle\ca
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\8d8a8abf56b0acf243894e5c793a7480\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\adb371d4d53f86eab98a28717d70cc7e\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\adb371d4d53f86eab98a28717d70cc7e\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bbebf41a6ba767929544d566df125e46\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bbebf41a6ba767929544d566df125e46\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [id.zelory:compressor:2.1.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\2cf704239199184ee824fdcb4065513b\jetified-compressor-2.1.0\AndroidManifest.xml:8:5-10:41
+MERGED from [id.zelory:compressor:2.1.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\2cf704239199184ee824fdcb4065513b\jetified-compressor-2.1.0\AndroidManifest.xml:8:5-10:41
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\002708d22968cd54df02d5dfedd6cae2\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\002708d22968cd54df02d5dfedd6cae2\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-measurement-api:17.5.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\35f10b9aa3282e0c4ce3ae644ab33b75\jetified-play-services-measurement-api-17.5.0\AndroidManifest.xml:20:5-44
@@ -267,8 +285,6 @@ MERGED from [com.google.firebase:firebase-common:19.3.1] C:\Users\rober\.gradle\
 MERGED from [com.google.firebase:firebase-common:19.3.1] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\9263446f4e667a45eb7a42eb61ed3210\jetified-firebase-common-19.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\626cd0cdd86577b53b05b9ceb0f9a7ca\jetified-firebase-components-16.0.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-components:16.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\626cd0cdd86577b53b05b9ceb0f9a7ca\jetified-firebase-components-16.0.0\AndroidManifest.xml:19:5-21:41
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\34d8e6fccc0ab5b895e5ef716d51459c\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\34d8e6fccc0ab5b895e5ef716d51459c\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\226817fd352d0debd037c03d8ec9b5c1\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\226817fd352d0debd037c03d8ec9b5c1\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\705071dba30571a9226503cb1f0dac80\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
@@ -339,6 +355,8 @@ MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\ro
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\ccd497c0d55509e00fa2c4ec5a0ae967\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.2.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\e5357b0b880d2be0ed83398576c19d42\core-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.2.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\e5357b0b880d2be0ed83398576c19d42\core-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\34d8e6fccc0ab5b895e5ef716d51459c\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\34d8e6fccc0ab5b895e5ef716d51459c\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\324b5866ad2c13339651997b434b41f3\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\324b5866ad2c13339651997b434b41f3\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\6ca55331635d9ca1071738b385928a75\documentfile-1.0.0\AndroidManifest.xml:20:5-44
@@ -419,14 +437,6 @@ ADDED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\rober\.gradle\
 		ADDED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\aac464be750fe7e42c6e3ef59b1c2d74\jetified-firebase-storage-19.2.0\AndroidManifest.xml:35:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\aac464be750fe7e42c6e3ef59b1c2d74\jetified-firebase-storage-19.2.0\AndroidManifest.xml:34:17-107
-provider#com.squareup.picasso.PicassoProvider
-ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bbebf41a6ba767929544d566df125e46\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
-	android:authorities
-		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bbebf41a6ba767929544d566df125e46\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
-	android:exported
-		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bbebf41a6ba767929544d566df125e46\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
-	android:name
-		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bbebf41a6ba767929544d566df125e46\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
 ADDED from [com.google.android.gms:play-services-auth:18.1.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bc0e002cee3c62e9d228887e35f0b209\jetified-play-services-auth-18.1.0\AndroidManifest.xml:23:9-27:75
 	android:excludeFromRecents
@@ -469,6 +479,14 @@ ADDED from [com.google.firebase:firebase-auth:19.3.2] C:\Users\rober\.gradle\cac
 		ADDED from [com.google.firebase:firebase-auth:19.3.2] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\16a303518ddb9c4f6d04d81a3a04d0b3\jetified-firebase-auth-19.3.2\AndroidManifest.xml:38:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:19.3.2] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\16a303518ddb9c4f6d04d81a3a04d0b3\jetified-firebase-auth-19.3.2\AndroidManifest.xml:37:17-109
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bbebf41a6ba767929544d566df125e46\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bbebf41a6ba767929544d566df125e46\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bbebf41a6ba767929544d566df125e46\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\bbebf41a6ba767929544d566df125e46\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [com.google.android.gms:play-services-measurement-api:17.5.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\35f10b9aa3282e0c4ce3ae644ab33b75\jetified-play-services-measurement-api-17.5.0\AndroidManifest.xml:24:5-68
 MERGED from [com.google.android.gms:play-services-measurement:17.5.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\58a41218ea342964128b5404cfbbd677\jetified-play-services-measurement-17.5.0\AndroidManifest.xml:25:5-68

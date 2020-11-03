@@ -48,7 +48,7 @@ public class SolicitarServicioActivity extends AppCompatActivity {
                 band = Validaciones(band);
                 if(band == true){
                     UpdateUser();
-                    Intent i = new Intent(SolicitarServicioActivity.this, InicioActivity.class);
+                    Intent i = new Intent(SolicitarServicioActivity.this, SubirImagenActivity.class);
                     startActivity(i);
                 }else{
                     Toast.makeText(SolicitarServicioActivity.this, "Debe llenar los espacios obligatorios", Toast.LENGTH_SHORT).show();

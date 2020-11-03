@@ -124,6 +124,10 @@
         "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\layout\\activity_solicitar_servicio.xml"
     },
     {
+        "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_subir_imagen.xml.flat",
+        "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\layout\\activity_subir_imagen.xml"
+    },
+    {
         "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\menu_top_menu.xml.flat",
         "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\menu\\top_menu.xml"
     },

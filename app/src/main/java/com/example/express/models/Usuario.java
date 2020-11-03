@@ -8,6 +8,7 @@ public class Usuario {
     private String Cotizacion;
     private String Telefono;
     private String Descripcion;
+    private String Imagen;
 
     public Usuario() {
     }
@@ -66,6 +67,14 @@ public class Usuario {
 
     public void setDescripcion(String descripcion) {
         Descripcion = descripcion;
+    }
+
+    public String getImagen() {
+        return Imagen;
+    }
+
+    public void setImagen(String imagen) {
+        Imagen = imagen;
     }
 
     @Override
