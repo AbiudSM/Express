@@ -103,6 +103,17 @@ public class InicioActivity extends AppCompatActivity {
                 usuarioViewHolder.setProfesion(usuario.getProfesion());
                 usuarioViewHolder.setDescripcion(usuario.getDescripcion());
                 usuarioViewHolder.setImagen(getApplicationContext(),usuario.getImagen());
+
+                final String usuarioID = usuario.getUid();
+                usuarioViewHolder.mView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(InicioActivity.this,MostrarUsuarioActivity.class);
+                        intent.putExtra("UsuarioID",usuarioID);
+                        intent.putExtra("isContacto","nulo");
+                        startActivity(intent);
+                    }
+                });
             }
         };
         mBlogList.setAdapter(firebaseRecyclerAdapter);

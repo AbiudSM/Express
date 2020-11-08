@@ -2,16 +2,23 @@ package com.example.express;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.express.models.Contactos;
 import com.example.express.models.Usuario;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
@@ -21,6 +28,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +36,7 @@ import java.util.List;
 public class ContactosActivity extends AppCompatActivity {
 
     BottomNavigationView mBottomNavigationView;
+    private RecyclerView mBlogList;
 
     FirebaseAuth mAuth;
     FirebaseDatabase firebaseDatabase;
@@ -36,10 +45,6 @@ public class ContactosActivity extends AppCompatActivity {
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     public String uid = user.getUid();
 
-    ListView mlv_contactos;
-    private List<Contactos> listContactos = new ArrayList<Contactos>();
-    ArrayAdapter<Contactos> arrayAdapterContactos;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,9 +52,15 @@ public class ContactosActivity extends AppCompatActivity {
 
         mBottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         mBottomNavigationView.setSelectedItemId((R.id.menu_contacts));
-        mlv_contactos = findViewById(R.id.lv_contactos);
 
         inicializarFirebase();
+
+        //RecyclerView
+        databaseReference.keepSynced(true);
+        mBlogList = (RecyclerView) findViewById(R.id.myRecyclerView);
+        mBlogList.setHasFixedSize(true);
+        mBlogList.setLayoutManager(new LinearLayoutManager(this));
+
         ListarDatos();
 
         mBottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -74,24 +85,29 @@ public class ContactosActivity extends AppCompatActivity {
     }
 
     private void ListarDatos() {
-        databaseReference.child("Usuario").child(uid).child("Contactos").addValueEventListener(new ValueEventListener() {
+        FirebaseRecyclerAdapter<Usuario, InicioActivity.UsuarioViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Usuario, InicioActivity.UsuarioViewHolder>
+                (Usuario.class,R.layout.blog_row, InicioActivity.UsuarioViewHolder.class,databaseReference.child("Usuario").orderByChild("Contactos/"+uid).equalTo(true)) {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                listContactos.clear();
-                for (DataSnapshot objSnapshot : snapshot.getChildren()) {
-                    Contactos c = objSnapshot.getValue(Contactos.class);
-                    listContactos.add(c);
+            protected void populateViewHolder(InicioActivity.UsuarioViewHolder usuarioViewHolder, Usuario usuario, int i) {
+                usuarioViewHolder.setNombre(usuario.getNombre());
+                usuarioViewHolder.setProfesion(usuario.getProfesion());
+                usuarioViewHolder.setDescripcion(usuario.getDescripcion());
+                usuarioViewHolder.setImagen(getApplicationContext(),usuario.getImagen());
 
-                    arrayAdapterContactos = new ArrayAdapter<Contactos>(getApplicationContext(), R.layout.my_list, listContactos);
-                    mlv_contactos.setAdapter(arrayAdapterContactos);
-                }
+                final String usuarioID = usuario.getUid();
+                usuarioViewHolder.mView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(ContactosActivity.this,MostrarUsuarioActivity.class);
+                        intent.putExtra("UsuarioID",usuarioID);
+                        intent.putExtra("isContacto","esContacto");
+                        startActivity(intent);
+                    }
+                });
             }
+        };
+        mBlogList.setAdapter(firebaseRecyclerAdapter);
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
     }
 
     private void inicializarFirebase() {

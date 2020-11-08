@@ -95,7 +95,6 @@ public class SubirImagenActivity extends AppCompatActivity {
             filePath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    progressDialog.dismiss();
 
                     final StorageReference ref = storageReference.child("fotos").child(uri.getLastPathSegment());
                     UploadTask uploadTask = ref.putFile(uri);
@@ -129,6 +128,7 @@ public class SubirImagenActivity extends AppCompatActivity {
                                 hashMap.put("imagen",downloadURL);
                                 databaseReference.child("Usuario").child(uid).updateChildren(hashMap);
 
+                                progressDialog.dismiss();
                                 Toast.makeText(SubirImagenActivity.this, "Imagen cargada exitosamente", Toast.LENGTH_SHORT).show();
                                 Intent i = new Intent(SubirImagenActivity.this, InicioActivity.class);
                                 startActivity(i);
