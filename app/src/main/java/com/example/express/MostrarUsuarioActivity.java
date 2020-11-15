@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,9 +30,8 @@ import java.util.HashMap;
 
 public class MostrarUsuarioActivity extends AppCompatActivity {
 
-    ImageView imagenUsuario;
-    TextView nombreUsuario, profesionUsuario, telefonoUsuario, cotizacionUsuario, serviciosUsuario, descripcionUsuario, eliminarContacto;
-    Button guardarContacto;
+    ImageView imagenUsuario, eliminarContacto, guardarContacto;
+    TextView nombreUsuario, profesionUsuario, telefonoUsuario, correoUsuario, cotizacionUsuario, serviciosUsuario, descripcionUsuario;
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -45,17 +45,19 @@ public class MostrarUsuarioActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mostrar_usuario);
         inicializarFirebase();
 
-        guardarContacto = (Button) findViewById(R.id.btn_guardar_contacto);
+        guardarContacto = (ImageView) findViewById(R.id.btn_guardar_contacto);
 
         nombreUsuario = (TextView) findViewById(R.id.usuarioNombre);
         profesionUsuario = (TextView) findViewById(R.id.usuarioProfesion);
         telefonoUsuario = (TextView) findViewById(R.id.usuarioTelefono);
+        correoUsuario = (TextView) findViewById(R.id.usuarioCorreo);
         cotizacionUsuario = (TextView) findViewById(R.id.usuarioCotizacion);
         serviciosUsuario = (TextView) findViewById(R.id.usuarioServicios);
         descripcionUsuario = (TextView) findViewById(R.id.usuarioDescripcion);
         imagenUsuario = (ImageView) findViewById(R.id.userImage);
 
-        eliminarContacto = (TextView) findViewById(R.id.txt_eliminarContacto);
+        eliminarContacto = (ImageView) findViewById(R.id.btnEliminarContacto);
+        eliminarContacto.setVisibility(View.INVISIBLE);
 
         final String idUsuario = getIntent().getStringExtra("UsuarioID");
         final String isContacto = getIntent().getStringExtra("isContacto");
@@ -68,19 +70,31 @@ public class MostrarUsuarioActivity extends AppCompatActivity {
                     Usuario u = snapshot.getValue(Usuario.class);
                     String nombre = u.getNombre();
                     String profesion = u.getProfesion();
-                    String telefono = u.getTelefono();
+                    final String telefono = u.getTelefono();
                     String cotizacion = u.getCotizacion();
                     String servicios = u.getServicios();
                     String descripcion = u.getDescripcion();
                     String imagen = u.getImagen();
+                    String correo = u.getCorreo();
 
                     Picasso.get().load(imagen).into(imagenUsuario);
                     nombreUsuario.setText(nombre);
                     profesionUsuario.setText(profesion);
                     telefonoUsuario.setText(telefono);
+                    correoUsuario.setText(correo);
                     cotizacionUsuario.setText(cotizacion);
                     serviciosUsuario.setText(servicios);
                     descripcionUsuario.setText(descripcion);
+
+                    // Onclick Telefono
+                    telefonoUsuario.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(Intent.ACTION_DIAL);
+                            intent.setData(Uri.parse("tel: " + telefono.trim()));
+                            startActivity(intent);
+                        }
+                    });
 
                     guardarContacto.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -95,7 +109,7 @@ public class MostrarUsuarioActivity extends AppCompatActivity {
 
                     // Eliminar contacto
                     if(isContacto.equals("esContacto")){
-                        eliminarContacto.setText("Eliminar");
+                        eliminarContacto.setVisibility(View.VISIBLE);
                         eliminarContacto.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {

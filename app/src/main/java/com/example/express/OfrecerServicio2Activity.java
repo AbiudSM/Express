@@ -72,6 +72,7 @@ public class OfrecerServicio2Activity extends AppCompatActivity {
         String cotizacion = userCotizacion.getText().toString();
         String telefono = userTelefono.getText().toString();
         String descripcion = getIntent().getStringExtra("descripcionSend");
+        String correo = user.getEmail();
 
         Usuario u = new Usuario();
         u.setUid(uid);
@@ -81,6 +82,7 @@ public class OfrecerServicio2Activity extends AppCompatActivity {
         u.setServicios(servicios);
         u.setTelefono(telefono);
         u.setDescripcion(descripcion);
+        u.setCorreo(correo);
 
         databaseReference.child("Usuario").child(u.getUid()).setValue(u);
     }

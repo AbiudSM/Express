@@ -29,6 +29,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.express.MostrarUsuarioActivity"
+            android:parentActivityName="com.example.express.InicioActivity" />
         <activity android:name="com.example.express.SubirImagenActivity" />
         <activity android:name="com.example.express.ContactosActivity" />
         <activity android:name="com.example.express.MiPerfilActivity" />

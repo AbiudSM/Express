@@ -78,10 +78,12 @@ public class SolicitarServicioActivity extends AppCompatActivity {
         String uid = user.getUid();
         String nombre = userNombre.getText().toString();
         String telefono = userTelefono.getText().toString();
+        String correo = user.getEmail();
 
         HashMap hashMap = new HashMap();
         hashMap.put("nombre",nombre);
         hashMap.put("telefono",telefono);
+        hashMap.put("correo",correo);
 
         databaseReference.child("Usuario").child(uid).setValue(hashMap);
     }

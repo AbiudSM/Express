@@ -9,6 +9,16 @@ public class Usuario {
     private String Telefono;
     private String Descripcion;
     private String Imagen;
+    private String Correo;
+
+
+    public String getCorreo() {
+        return Correo;
+    }
+
+    public void setCorreo(String correo) {
+        Correo = correo;
+    }
 
     public Usuario() {
     }

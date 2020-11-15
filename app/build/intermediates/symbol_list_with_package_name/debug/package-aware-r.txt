@@ -1490,6 +1490,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_account
 drawable ic_contacts
+drawable ic_delete
 drawable ic_home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -1498,6 +1499,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_save
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
 drawable material_ic_edit_black_24dp
@@ -1610,17 +1612,18 @@ id beginning
 id blocking
 id bottom
 id bottom_navigation
+id btnEliminarContacto
 id btnSignOut
 id btn_OfrecerServicio
 id btn_SolicitarServicio
 id btn_avanzar
 id btn_guardar_cambios
+id btn_guardar_contacto
 id btn_seleccionar_imagen
 id buttonPanel
 id cancel_action
 id cancel_button
 id cardDescripcion
-id cardGuardar
 id cardImage
 id cardNombre
 id cardProfesion
@@ -1723,7 +1726,6 @@ id linearLayout
 id linearLayout2
 id listMode
 id list_item
-id lv_contactos
 id masked
 id media_actions
 id menu_account
@@ -1917,6 +1919,14 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id userImage
+id usuarioCorreo
+id usuarioCotizacion
+id usuarioDescripcion
+id usuarioNombre
+id usuarioProfesion
+id usuarioServicios
+id usuarioTelefono
 id view_offset_helper
 id visible
 id wide
@@ -1992,6 +2002,7 @@ layout activity_inicio
 layout activity_inicio_sesion_exitoso
 layout activity_main
 layout activity_mi_perfil
+layout activity_mostrar_usuario
 layout activity_ofrecer_servicio
 layout activity_ofrecer_servicio2
 layout activity_registrarse
