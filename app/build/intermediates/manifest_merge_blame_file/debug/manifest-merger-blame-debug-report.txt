@@ -64,7 +64,7 @@
 36-->C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:19:9-55
 36-->C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:19:19-52
 37        <activity android:name="com.example.express.MiPerfilActivity" />
-37-->C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:20:9-54
+37-->C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:20:9-53
 37-->C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:20:19-51
 38        <activity
 38-->C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:21:9-23:64

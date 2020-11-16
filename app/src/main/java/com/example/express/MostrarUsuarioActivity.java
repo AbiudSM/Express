@@ -80,22 +80,41 @@ public class MostrarUsuarioActivity extends AppCompatActivity {
                     Picasso.get().load(imagen).into(imagenUsuario);
                     nombreUsuario.setText(nombre);
                     profesionUsuario.setText(profesion);
-                    telefonoUsuario.setText(telefono);
-                    correoUsuario.setText(correo);
-                    cotizacionUsuario.setText(cotizacion);
-                    serviciosUsuario.setText(servicios);
-                    descripcionUsuario.setText(descripcion);
+
+                    if((telefono != null) && (!telefono.equals(""))){
+                        telefonoUsuario.setText(telefono);
+                    }
+
+                    if((correo != null) && (!correo.equals(""))){
+                        correoUsuario.setText(correo);
+                    }
+
+                    if((cotizacion != null) && (!cotizacion.equals(""))){
+                        cotizacionUsuario.setText(cotizacion);
+                    }
+
+                    if((servicios != null) && (!servicios.equals(""))){
+                        serviciosUsuario.setText(servicios);
+                    }
+
+                    if((descripcion != null) && (!descripcion.equals(""))){
+                        descripcionUsuario.setText(descripcion);
+                    }
+
 
                     // Onclick Telefono
-                    telefonoUsuario.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Intent intent = new Intent(Intent.ACTION_DIAL);
-                            intent.setData(Uri.parse("tel: " + telefono.trim()));
-                            startActivity(intent);
-                        }
-                    });
+                    if((telefono != null) && (!telefono.equals(""))){
+                        telefonoUsuario.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent = new Intent(Intent.ACTION_DIAL);
+                                intent.setData(Uri.parse("tel: " + telefono.trim()));
+                                startActivity(intent);
+                            }
+                        });
+                    }
 
+                    // Boton guardar contacto
                     guardarContacto.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -152,4 +171,6 @@ public class MostrarUsuarioActivity extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
     }
+
+
 }

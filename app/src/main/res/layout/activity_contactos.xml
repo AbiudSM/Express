@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Activity Contactos"
+            android:text="Contactos"
             android:textColor="@color/colorWhite"
             android:textSize="40dp" />
 

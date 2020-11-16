@@ -1452,6 +1452,7 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable btn1
 drawable btn2
+drawable btn3
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1508,6 +1509,7 @@ drawable ic_save
 drawable ic_verified
 drawable input_box
 drawable input_box_2
+drawable input_box_3
 drawable logo_express
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1772,6 +1774,7 @@ id mtrl_picker_text_input_range_end
 id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
+id myPhoto
 id myRecyclerView
 id navigation_header_container
 id never

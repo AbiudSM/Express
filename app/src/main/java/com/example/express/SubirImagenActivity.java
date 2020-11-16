@@ -90,7 +90,7 @@ public class SubirImagenActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String uid = user.getUid();
                 HashMap hashMap = new HashMap();
-                hashMap.put("imagen","https://firebasestorage.googleapis.com/v0/b/express-31164.appspot.com/o/fotos%2Fpersona.png?alt=media&token=fbe69750-21c8-4c31-8189-9a5d68494714");
+                hashMap.put("imagen","https://firebasestorage.googleapis.com/v0/b/express-31164.appspot.com/o/fotos%2Fic_usuario.png?alt=media&token=f32f03a1-777d-4ddd-af0e-f1ac0df7c85a");
 
                 databaseReference.child("Usuario").child(uid).updateChildren(hashMap);
                 Intent i = new Intent(SubirImagenActivity.this, InicioActivity.class);

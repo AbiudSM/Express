@@ -5,12 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.express.models.Usuario;
@@ -23,6 +26,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 
@@ -34,6 +38,7 @@ public class MiPerfilActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     EditText userNombre, userTelefono, userProfesion, userServicios, userCotizacion, userDescripcion;
+    ImageView photo;
     Button mbtn_guardar_cambios;
     public String uid = user.getUid();
 
@@ -52,6 +57,8 @@ public class MiPerfilActivity extends AppCompatActivity {
         userCotizacion = findViewById(R.id.txt_cotizacion_perfil);
         userDescripcion = findViewById(R.id.txt_descripcion_perfil);
         mbtn_guardar_cambios = findViewById(R.id.btn_guardar_cambios);
+        mbtn_guardar_cambios.setEnabled(false);
+        photo = (ImageView) findViewById(R.id.myPhoto);
 
         inicializarFirebase();
         MostrarDatos();
@@ -82,6 +89,26 @@ public class MiPerfilActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        // Mostrar imagen de usuario
+        databaseReference.child("Usuario").child(uid).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    Usuario u = snapshot.getValue(Usuario.class);
+                    String imagen = u.getImagen();
+                    Picasso.get().load(imagen).into(photo);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        // Ocultar boton guardar
+        OcultarBoton();
     }
 
     private void inicializarFirebase() {
@@ -112,13 +139,14 @@ public class MiPerfilActivity extends AppCompatActivity {
     }
 
     // MOSTRAR TOP MENU
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.top_menu,menu);
         return true;
     }
-
     // SWITCH DEL TOP MENU
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
@@ -155,5 +183,178 @@ public class MiPerfilActivity extends AppCompatActivity {
         databaseReference.child("Usuario").child(uid).updateChildren(hashMap);
 
         Toast.makeText(this, "Usuario Actualizado", Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(getApplicationContext(), MiPerfilActivity.class);
+        startActivity(intent);
+        overridePendingTransition(0,0);
+    }
+
+    private void OcultarBoton() {
+        databaseReference.child("Usuario").child(uid).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Usuario u = snapshot.getValue(Usuario.class);
+                final String newNombre = u.getNombre();
+                userNombre.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                        if((charSequence.equals(newNombre))){
+                            mbtn_guardar_cambios.setEnabled(false);
+                        }else{
+                            mbtn_guardar_cambios.setEnabled(true);
+                        }
+                    }
+
+                    @Override
+                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable editable) {
+                        if((editable.equals(newNombre))){
+                            mbtn_guardar_cambios.setEnabled(false);
+                        }else{
+                            mbtn_guardar_cambios.setEnabled(true);
+                        }
+                    }
+                });
+
+                final String newProfesion = u.getProfesion();
+                userProfesion.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                        if((charSequence.equals(newProfesion))){
+                            mbtn_guardar_cambios.setEnabled(false);
+                        }else{
+                            mbtn_guardar_cambios.setEnabled(true);
+                        }
+                    }
+
+                    @Override
+                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable editable) {
+                        if((editable.equals(newProfesion))){
+                            mbtn_guardar_cambios.setEnabled(false);
+                        }else{
+                            mbtn_guardar_cambios.setEnabled(true);
+                        }
+                    }
+                });
+
+                final String newServicios = u.getServicios();
+                userServicios.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                        if((charSequence.equals(newServicios))){
+                            mbtn_guardar_cambios.setEnabled(false);
+                        }else{
+                            mbtn_guardar_cambios.setEnabled(true);
+                        }
+                    }
+
+                    @Override
+                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable editable) {
+                        if((editable.equals(newServicios))){
+                            mbtn_guardar_cambios.setEnabled(false);
+                        }else{
+                            mbtn_guardar_cambios.setEnabled(true);
+                        }
+                    }
+                });
+
+                final String newCotizacion = u.getCotizacion();
+                userCotizacion.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                        if((charSequence.equals(newCotizacion))){
+                            mbtn_guardar_cambios.setEnabled(false);
+                        }else{
+                            mbtn_guardar_cambios.setEnabled(true);
+                        }
+                    }
+
+                    @Override
+                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable editable) {
+                        if((editable.equals(newCotizacion))){
+                            mbtn_guardar_cambios.setEnabled(false);
+                        }else{
+                            mbtn_guardar_cambios.setEnabled(true);
+                        }
+                    }
+                });
+
+                final String newTelefono = u.getTelefono();
+                userTelefono.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                        if((charSequence.equals(newTelefono))){
+                            mbtn_guardar_cambios.setEnabled(false);
+                        }else{
+                            mbtn_guardar_cambios.setEnabled(true);
+                        }
+                    }
+
+                    @Override
+                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable editable) {
+                        if((editable.equals(newTelefono))){
+                            mbtn_guardar_cambios.setEnabled(false);
+                        }else{
+                            mbtn_guardar_cambios.setEnabled(true);
+                        }
+                    }
+                });
+
+                final String newDescripcion = u.getDescripcion();
+                userDescripcion.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                        if((charSequence.equals(newDescripcion))){
+                            mbtn_guardar_cambios.setEnabled(false);
+                        }else{
+                            mbtn_guardar_cambios.setEnabled(true);
+                        }
+                    }
+
+                    @Override
+                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable editable) {
+                        if((editable.equals(newDescripcion))){
+                            mbtn_guardar_cambios.setEnabled(false);
+                        }else{
+                            mbtn_guardar_cambios.setEnabled(true);
+                        }
+                    }
+                });
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 }

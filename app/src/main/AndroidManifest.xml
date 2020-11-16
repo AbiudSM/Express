@@ -17,7 +17,7 @@
             android:parentActivityName=".InicioActivity"/>
         <activity android:name=".SubirImagenActivity" />
         <activity android:name=".ContactosActivity" />
-        <activity android:name=".MiPerfilActivity" />
+        <activity android:name=".MiPerfilActivity"/>
         <activity
             android:name=".SolicitarServicioActivity"
             android:parentActivityName=".BienvenidaActivity" />
