@@ -109,6 +109,7 @@ public class MostrarUsuarioActivity extends AppCompatActivity {
 
                     // Eliminar contacto
                     if(isContacto.equals("esContacto")){
+                        guardarContacto.setVisibility(View.INVISIBLE);
                         eliminarContacto.setVisibility(View.VISIBLE);
                         eliminarContacto.setOnClickListener(new View.OnClickListener() {
                             @Override

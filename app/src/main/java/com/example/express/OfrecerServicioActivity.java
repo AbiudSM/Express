@@ -7,10 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 public class OfrecerServicioActivity extends AppCompatActivity {
 
-    public Button avanzar;
+    ImageView avanzar;
     EditText userDescripcion;
 
     @Override
@@ -23,7 +24,7 @@ public class OfrecerServicioActivity extends AppCompatActivity {
 
         userDescripcion = findViewById(R.id.txt_descripcion);
 
-        avanzar = findViewById(R.id.btn_avanzar);
+        avanzar = (ImageView) findViewById(R.id.btn_avanzar);
         avanzar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

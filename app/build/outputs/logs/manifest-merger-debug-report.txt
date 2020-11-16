@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-41:12
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-42:12
 MERGED from [com.firebaseui:firebase-ui-database:0.4.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\91550f654927fd460f396a68922abb3c\jetified-firebase-ui-database-0.4.0\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.firebase:firebase-database:19.5.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\2e4ccb7969f494686450358e4a1c1ade\jetified-firebase-database-19.5.0\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\aac464be750fe7e42c6e3ef59b1c2d74\jetified-firebase-storage-19.2.0\AndroidManifest.xml:15:1-39:12
@@ -72,20 +72,20 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\rober\.gradle
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\b77454809810e03ad1b0b8586694d509\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\59b723f090061559cc5b6f12f2aff3bc\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\ae891c337b2dc8d7a559b90a3711f662\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-42:12
 	package
 		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:3:5-34
 		INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-41:12
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-42:12
 		INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-41:12
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:1-42:12
 		INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:2:11-69
@@ -118,7 +118,7 @@ ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidMani
 	android:name
 		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:7:22-77
 application
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:9:5-39:19
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:9:5-40:19
 MERGED from [com.google.firebase:firebase-database:19.5.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\2e4ccb7969f494686450358e4a1c1ade\jetified-firebase-database-19.5.0\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-database:19.5.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\2e4ccb7969f494686450358e4a1c1ade\jetified-firebase-database-19.5.0\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-storage:19.2.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\aac464be750fe7e42c6e3ef59b1c2d74\jetified-firebase-storage-19.2.0\AndroidManifest.xml:29:5-37:19
@@ -228,23 +228,25 @@ ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidMani
 	android:name
 		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:30:19-54
 activity#com.example.express.RegistrarseActivity
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:31:9-57
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:31:9-32:57
+	android:parentActivityName
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:32:13-55
 	android:name
 		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:31:19-54
 activity#com.example.express.MainActivity
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:32:9-38:20
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:33:9-39:20
 	android:name
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:32:19-47
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:33:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:33:13-37:29
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:34:13-38:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:34:17-69
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:35:17-69
 	android:name
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:34:25-66
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:35:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:36:17-77
+ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:37:17-77
 	android:name
-		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:36:27-74
+		ADDED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:37:27-74
 uses-sdk
 INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml

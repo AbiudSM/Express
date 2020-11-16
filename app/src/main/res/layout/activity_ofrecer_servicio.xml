@@ -8,22 +8,20 @@
     tools:context=".OfrecerServicioActivity">
 
     <LinearLayout
-        android:layout_width="364dp"
-        android:layout_height="613dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_margin="20dp">
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
+            android:textStyle="bold"
             android:text="Ofrecer un servicio"
             android:textColor="#FFFFFF"
-            android:textSize="24sp" />
+            android:textSize="28sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -45,8 +43,11 @@
         <EditText
             android:id="@+id/txt_descripcion"
             android:layout_width="match_parent"
-            android:layout_height="251dp"
-            android:background="#EBFFFD"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:background="@drawable/input_box_2"
+            android:padding="15dp"
+            android:textColorHint="#656565"
             android:ems="10"
             android:hint="Descripción"
             android:gravity="start|top"
@@ -56,10 +57,18 @@
             android:layout_width="match_parent"
             android:layout_height="46dp" />
 
-        <Button
-            android:id="@+id/btn_avanzar"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="Avanzar" />
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btn_avanzar"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ic_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/colorWhite"/>
+        </RelativeLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

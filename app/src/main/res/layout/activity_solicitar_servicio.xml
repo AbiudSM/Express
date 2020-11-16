@@ -8,13 +8,10 @@
     tools:context=".SolicitarServicioActivity">
 
     <LinearLayout
-        android:layout_width="364dp"
-        android:layout_height="613dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_margin="20dp">
 
         <TextView
             android:id="@+id/textView8"
@@ -22,12 +19,13 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:text="Solicitar un servicio"
+            android:textStyle="bold"
             android:textColor="#FFFFFF"
-            android:textSize="24sp" />
+            android:textSize="26sp" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="60dp" />
+            android:layout_height="20dp" />
 
         <TextView
             android:id="@+id/textView80"
@@ -36,41 +34,55 @@
             android:gravity="center_horizontal"
             android:text="Agrega tu información"
             android:textColor="#FFFFFF"
-            android:textSize="24sp" />
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="70dp" />
-
-        <EditText
-            android:id="@+id/txt_nombre_ss"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:background="#EBFFFD"
-            android:hint="Nombre" />
-
+            android:textSize="20sp" />
         <Space
             android:layout_width="match_parent"
             android:layout_height="50dp" />
 
         <EditText
+            android:id="@+id/txt_nombre_ss"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:background="@drawable/input_box_2"
+            android:paddingHorizontal="15dp"
+            android:textColorHint="#656565"
+            android:hint="Nombre" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <EditText
             android:id="@+id/txt_telefono_ss"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="60dp"
             android:ems="10"
             android:inputType="phone"
-            android:background="#EBFFFD"
+            android:textColor="#000000"
+            android:background="@drawable/input_box_2"
+            android:paddingHorizontal="15dp"
+            android:textColorHint="#656565"
             android:hint="Teléfono" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="80dp" />
+            android:layout_height="20dp" />
 
-        <Button
-            android:id="@+id/btn_avanzar"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="Avanzar" />
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btn_avanzar"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ic_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/colorWhite"/>
+        </RelativeLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

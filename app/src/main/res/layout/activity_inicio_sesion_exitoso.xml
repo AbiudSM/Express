@@ -8,14 +8,10 @@
     tools:context=".InicioSesionExitoso">
 
     <LinearLayout
-        android:layout_width="379dp"
-        android:layout_height="627dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.74">
+        android:layout_margin="20dp">
 
         <TextView
             android:id="@+id/txt_Bienvenido"
@@ -29,7 +25,18 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="69dp" />
+            android:layout_height="20dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_verified"
+            android:tint="#039BE5"
+            android:layout_gravity="center"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
 
         <TextView
             android:id="@+id/textView3"
@@ -42,7 +49,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="234dp" />
+            android:layout_height="100dp" />
 
         <TextView
             android:id="@+id/enviar_correo"
@@ -53,9 +60,10 @@
             android:gravity="center_horizontal"
             android:linksClickable="true"
             android:longClickable="true"
-            android:text="Volver a enviar correo"
-            android:textColor="#FBE271"
-            android:textSize="18sp" />
+            android:textStyle="italic"
+            android:text="Volver a enviar correo de verificación"
+            android:textColor="#54AFFF"
+            android:textSize="20sp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

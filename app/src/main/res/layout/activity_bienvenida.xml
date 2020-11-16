@@ -8,13 +8,10 @@
     tools:context=".BienvenidaActivity">
 
     <LinearLayout
-        android:layout_width="369dp"
-        android:layout_height="645dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_margin="20dp">
 
         <Space
             android:layout_width="match_parent"
@@ -26,6 +23,7 @@
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
+            android:textStyle="bold"
             android:gravity="center_horizontal"
             android:text="¡Te damos la Bienvenida!" />
 
@@ -44,12 +42,17 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
+            android:layout_height="70dp" />
 
         <Button
             android:id="@+id/btn_OfrecerServicio"
+            android:background="@drawable/btn1"
             android:layout_width="match_parent"
-            android:layout_height="85dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:padding="50dp"
+            android:textStyle="bold"
+            android:textColor="#004851"
             android:text="Ofrecer un servicio" />
 
         <Space
@@ -58,8 +61,13 @@
 
         <Button
             android:id="@+id/btn_SolicitarServicio"
+            android:background="@drawable/btn2"
             android:layout_width="match_parent"
-            android:layout_height="85dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:padding="50dp"
+            android:textStyle="bold"
+            android:textColor="#004003"
             android:text="Solicitar un servicio" />
 
     </LinearLayout>

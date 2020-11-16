@@ -32,7 +32,7 @@ public class RegistrarseActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     public String email, password;
     public EditText txt_correo;
-    public EditText txt_contrasena;
+    public EditText txt_contrasena, txt_confirmar_contrasena;
     public Button btn_registrarse;
 
     @Override
@@ -44,6 +44,7 @@ public class RegistrarseActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         txt_correo = findViewById(R.id.correo_singUp);
         txt_contrasena = findViewById(R.id.contrasena_singUp);
+        txt_confirmar_contrasena = findViewById(R.id.confirmar_contrasena_singUp);
         btn_registrarse = findViewById(R.id.singUpButton);
 
         btn_registrarse.setOnClickListener(new View.OnClickListener() {
@@ -60,38 +61,45 @@ public class RegistrarseActivity extends AppCompatActivity {
     private void Registrarse() {
         email = txt_correo.getText().toString();
         password = txt_contrasena.getText().toString();
+        String confimPassword = txt_confirmar_contrasena.getText().toString();
 
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this,  new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "createUserWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            user.sendEmailVerification();
-                            updateUI(user);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(RegistrarseActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                            updateUI(null);
+        if (email.equals("")){
+            txt_correo.setError("Correo necesario");
+            return;
+        }
+        if (password.equals("")){
+            txt_contrasena.setError("Contraseña necesaria");
+            return;
+        }
+        if (confimPassword.equals("")){
+            txt_correo.setError("Required");
+            return;
+        }
+
+        if(password.equals(confimPassword)){
+            mAuth.createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this,  new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                Log.d(TAG, "createUserWithEmail:success");
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                user.sendEmailVerification();
+                                updateUI(user);
+                            } else {
+                                // If sign in fails, display a message to the user.
+                                Log.w(TAG, "createUserWithEmail:failure", task.getException());
+                                Toast.makeText(RegistrarseActivity.this, "Error al autenticar su cuenta, favor de ingresar un correo existente.",
+                                        Toast.LENGTH_SHORT).show();
+                                updateUI(null);
+                            }
                         }
-
-                        // ...
-                    }
-                });
+                    });
+        }else{
+            Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+        }
     }
-
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        //FirebaseUser currentUser = mAuth.getCurrentUser();
-        //updateUI(currentUser);
-    }// Fin onStart
 
     private void updateUI(FirebaseUser currentUser) {
         Intent i = new Intent(this, InicioSesionExitoso.class);

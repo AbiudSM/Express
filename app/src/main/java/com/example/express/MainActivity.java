@@ -48,6 +48,15 @@ public class MainActivity extends AppCompatActivity {
         email = txt_correo.getText().toString();
         password = txt_contrasena.getText().toString();
 
+        if (email.equals("")){
+            txt_correo.setError("Ingrese un correo");
+            return;
+        }
+        if (password.equals("")){
+            txt_contrasena.setError("Ingrese su contraseña");
+            return;
+        }
+
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override

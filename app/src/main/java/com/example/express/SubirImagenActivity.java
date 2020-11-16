@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -33,6 +34,8 @@ import com.squareup.picasso.Picasso;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
+import org.w3c.dom.Text;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
@@ -43,9 +46,11 @@ import id.zelory.compressor.Compressor;
 
 public class SubirImagenActivity extends AppCompatActivity {
 
-    public Button avanzar, mUploadBtn;
+    public Button mUploadBtn;
     private ImageView foto;
     private ProgressDialog progressDialog;
+    public ImageView avanzar;
+    public TextView omitir;
 
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     FirebaseDatabase firebaseDatabase;
@@ -63,6 +68,9 @@ public class SubirImagenActivity extends AppCompatActivity {
         inicializarFirebase();
         foto = (ImageView) findViewById(R.id.img_foto);
         progressDialog = new ProgressDialog(this);
+        avanzar = (ImageView) findViewById(R.id.subir);
+        avanzar.setVisibility(View.INVISIBLE);
+        omitir = (TextView) findViewById(R.id.txt_omitir);
 
         storageReference = FirebaseStorage.getInstance().getReference();
 
@@ -76,6 +84,19 @@ public class SubirImagenActivity extends AppCompatActivity {
                 startActivityForResult(intent,GALLERY_INTENT);
             }
         });
+
+        omitir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String uid = user.getUid();
+                HashMap hashMap = new HashMap();
+                hashMap.put("imagen","https://firebasestorage.googleapis.com/v0/b/express-31164.appspot.com/o/fotos%2Fpersona.png?alt=media&token=fbe69750-21c8-4c31-8189-9a5d68494714");
+
+                databaseReference.child("Usuario").child(uid).updateChildren(hashMap);
+                Intent i = new Intent(SubirImagenActivity.this, InicioActivity.class);
+                startActivity(i);
+            }
+        });
     }// Fin del onCreate
 
     @Override
@@ -85,57 +106,66 @@ public class SubirImagenActivity extends AppCompatActivity {
         if(requestCode==GALLERY_INTENT && resultCode==RESULT_OK){
             final Uri uri = data.getData();
 
-            progressDialog.setTitle("Subiendo imagen");
-            progressDialog.setMessage("Subiento imagen a la nube");
-            progressDialog.setCancelable(false);
-            progressDialog.show();
+            foto.setImageURI(uri);
+            mUploadBtn.setText("Cambiar Foto");
+            avanzar.setVisibility(View.VISIBLE);
 
-            StorageReference filePath = storageReference.child("fotos").child(uri.getLastPathSegment());
-
-            filePath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            avanzar.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                public void onClick(View view) {
+                    progressDialog.setTitle("Subiendo imagen");
+                    progressDialog.setMessage("Subiento imagen a la nube");
+                    progressDialog.setCancelable(false);
+                    progressDialog.show();
 
-                    final StorageReference ref = storageReference.child("fotos").child(uri.getLastPathSegment());
-                    UploadTask uploadTask = ref.putFile(uri);
+                    StorageReference filePath = storageReference.child("fotos").child(uri.getLastPathSegment());
 
-                    Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
+                    filePath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
-                        public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
-                            if (!task.isSuccessful()) {
-                                throw task.getException();
-                            }
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
-                            // Continue with the task to get the download URL
-                            return ref.getDownloadUrl();
-                        }
-                    }).addOnCompleteListener(new OnCompleteListener<Uri>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Uri> task) {
-                            if (task.isSuccessful()) {
-                                Uri downloadUri = task.getResult();
-                                String downloadURL = downloadUri.toString();
+                            final StorageReference ref = storageReference.child("fotos").child(uri.getLastPathSegment());
+                            UploadTask uploadTask = ref.putFile(uri);
 
-                                Glide.with(SubirImagenActivity.this)
-                                        .load(downloadURL)
-                                        .fitCenter()
-                                        .centerCrop()
-                                        .into(foto);
+                            Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
+                                @Override
+                                public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
+                                    if (!task.isSuccessful()) {
+                                        throw task.getException();
+                                    }
 
-                                String uid = user.getUid();
+                                    // Continue with the task to get the download URL
+                                    return ref.getDownloadUrl();
+                                }
+                            }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Uri> task) {
+                                    if (task.isSuccessful()) {
+                                        Uri downloadUri = task.getResult();
+                                        String downloadURL = downloadUri.toString();
 
-                                HashMap hashMap = new HashMap();
-                                hashMap.put("imagen",downloadURL);
-                                databaseReference.child("Usuario").child(uid).updateChildren(hashMap);
+                                        Glide.with(SubirImagenActivity.this)
+                                                .load(downloadURL)
+                                                .fitCenter()
+                                                .centerCrop()
+                                                .into(foto);
 
-                                progressDialog.dismiss();
-                                Toast.makeText(SubirImagenActivity.this, "Imagen cargada exitosamente", Toast.LENGTH_SHORT).show();
-                                Intent i = new Intent(SubirImagenActivity.this, InicioActivity.class);
-                                startActivity(i);
-                            } else {
-                                // Handle failures
-                                // ...
-                            }
+                                        String uid = user.getUid();
+
+                                        HashMap hashMap = new HashMap();
+                                        hashMap.put("imagen",downloadURL);
+                                        databaseReference.child("Usuario").child(uid).updateChildren(hashMap);
+
+                                        progressDialog.dismiss();
+                                        Toast.makeText(SubirImagenActivity.this, "Imagen cargada exitosamente", Toast.LENGTH_SHORT).show();
+                                        Intent i = new Intent(SubirImagenActivity.this, InicioActivity.class);
+                                        startActivity(i);
+                                    } else {
+                                        // Handle failures
+                                        // ...
+                                    }
+                                }
+                            });
                         }
                     });
                 }

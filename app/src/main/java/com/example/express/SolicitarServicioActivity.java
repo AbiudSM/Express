@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.express.models.Usuario;
@@ -21,7 +22,7 @@ import java.util.UUID;
 
 public class SolicitarServicioActivity extends AppCompatActivity {
 
-    public Button avanzar;
+    ImageView avanzar;
     EditText userNombre, userTelefono;
     public boolean band = true;
     FirebaseDatabase firebaseDatabase;
@@ -40,7 +41,7 @@ public class SolicitarServicioActivity extends AppCompatActivity {
         userTelefono = findViewById(R.id.txt_telefono_ss);
         inicializarFirebase();
 
-        avanzar = findViewById(R.id.btn_avanzar);
+        avanzar = (ImageView) findViewById(R.id.btn_avanzar);
         avanzar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

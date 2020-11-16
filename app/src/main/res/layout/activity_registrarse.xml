@@ -9,15 +9,10 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="335dp"
-        android:layout_height="613dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
 
 
         <TextView
@@ -25,38 +20,61 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="Registrarse"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:text="Crea una nueva cuenta"
             android:textColor="#FFFFFF"
-            android:textSize="24sp" />
+            android:textSize="30sp" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="63dp" />
+            android:layout_height="60dp" />
 
         <EditText
             android:id="@+id/correo_singUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:background="@drawable/input_box"
+            android:padding="15dp"
+            android:textColorHint="#C8C8C8"
             android:hint="Correo"
-            android:inputType="textPersonName"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#7A7A7A" />
+            android:inputType="textEmailAddress"
+            android:textColor="#FFFFFF" />
 
         <EditText
             android:id="@+id/contrasena_singUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:ems="10"
+            android:background="@drawable/input_box"
+            android:padding="15dp"
+            android:textColorHint="#C8C8C8"
             android:hint="Contraseña"
             android:inputType="textPassword"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#7A7A7A" />
+            android:textColor="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/confirmar_contrasena_singUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:background="@drawable/input_box"
+            android:padding="15dp"
+            android:textColorHint="#C8C8C8"
+            android:hint="Confirmar contraseña"
+            android:inputType="textPassword"
+            android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/singUpButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/btn_redondo"
+            android:padding="20dp"
+            android:layout_marginTop="40dp"
             android:text="Registrarse" />
 
     </LinearLayout>

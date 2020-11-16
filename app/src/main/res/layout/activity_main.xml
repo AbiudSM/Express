@@ -10,15 +10,18 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="333dp"
-        android:layout_height="619dp"
-        android:gravity="center"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo_express"/>
 
 
         <TextView
@@ -26,52 +29,84 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="Inicio de sesión"
+            android:text="Inicia sesión"
             android:textColor="#FFFFFF"
             android:textColorHighlight="#009688"
-            android:textSize="24sp" />
+            android:textStyle="bold"
+            android:textSize="28sp" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="52dp" />
+            android:layout_height="30dp" />
 
         <EditText
             android:id="@+id/correo"
             style="@style/Widget.AppCompat.AutoCompleteTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/input_box"
+            android:padding="15dp"
+            android:textColorHint="#C8C8C8"
             android:ems="10"
             android:hint="Correo"
-            android:inputType="textPersonName"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#7A7A7A" />
+            android:inputType="textEmailAddress"
+            android:textColor="#FFFFFF" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
 
         <EditText
             android:id="@+id/contrasena"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/input_box"
+            android:padding="15dp"
             android:ems="10"
             android:hint="Contraseña"
             android:inputType="textPassword"
             android:textColor="#FFFFFF"
-            android:textColorHint="#7A7A7A" />
+            android:textColorHint="#C8C8C8" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
 
         <Button
             android:id="@+id/iniciarSesion"
+            android:background="@drawable/btn_redondo"
+            android:padding="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Iniciar Sesión" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="42dp" />
+            android:layout_height="80dp" />
 
-        <Button
-            android:id="@+id/registrarse"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="¿No tienes una cuenta?"
+            android:textStyle="italic"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#009688"
+            android:textSize="18sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/registrarse"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:textColor="#A7B3FF"
+            android:textColorHighlight="#009688"
+            android:textSize="18sp"
             android:onClick="irRegistrarse"
-            android:text="Registrarse" />
+            android:text="Registrate aquí" />
 
     </LinearLayout>
 
