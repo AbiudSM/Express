@@ -112,6 +112,10 @@
         "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\layout\\blog_row.xml"
     },
     {
+        "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_search.xml.flat",
+        "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\drawable\\ic_search.xml"
+    },
+    {
         "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
@@ -132,12 +136,20 @@
         "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\drawable\\ic_verified.xml"
     },
     {
+        "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\menu_top_menu_inicio.xml.flat",
+        "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\menu\\top_menu_inicio.xml"
+    },
+    {
         "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo_express.png.flat",
         "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\drawable\\logo_express.png"
     },
     {
         "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_inicio_sesion_exitoso.xml.flat",
         "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\layout\\activity_inicio_sesion_exitoso.xml"
+    },
+    {
+        "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_buscar_profesionista.xml.flat",
+        "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\layout\\activity_buscar_profesionista.xml"
     },
     {
         "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_home.xml.flat",
@@ -174,6 +186,10 @@
     {
         "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_left.xml.flat",
+        "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\drawable\\ic_left.xml"
     },
     {
         "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_subir_imagen.xml.flat",

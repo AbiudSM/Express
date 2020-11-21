@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
     private void updateUI(FirebaseUser user) {
         Intent i = new Intent(this, InicioActivity.class);
         startActivity(i);
+        overridePendingTransition(0,0);
     }
 
     public void irRegistrarse(View view){

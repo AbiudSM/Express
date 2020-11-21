@@ -13,11 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MostrarUsuarioActivity"
-            android:parentActivityName=".InicioActivity"/>
+        <activity android:name=".ActivityBuscarProfesionista"></activity>
+        <activity
+            android:name=".MostrarUsuarioActivity"
+            android:parentActivityName=".InicioActivity" />
         <activity android:name=".SubirImagenActivity" />
         <activity android:name=".ContactosActivity" />
-        <activity android:name=".MiPerfilActivity"/>
+        <activity android:name=".MiPerfilActivity" />
         <activity
             android:name=".SolicitarServicioActivity"
             android:parentActivityName=".BienvenidaActivity" />
@@ -28,8 +30,9 @@
         <activity android:name=".BienvenidaActivity" />
         <activity android:name=".InicioActivity" />
         <activity android:name=".InicioSesionExitoso" />
-        <activity android:name=".RegistrarseActivity"
-            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".RegistrarseActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

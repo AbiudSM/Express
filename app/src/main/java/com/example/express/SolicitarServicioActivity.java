@@ -85,6 +85,7 @@ public class SolicitarServicioActivity extends AppCompatActivity {
         hashMap.put("nombre",nombre);
         hashMap.put("telefono",telefono);
         hashMap.put("correo",correo);
+        hashMap.put("uid",uid);
 
         databaseReference.child("Usuario").child(uid).setValue(hashMap);
     }

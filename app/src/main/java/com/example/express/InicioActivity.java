@@ -14,11 +14,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -99,6 +101,7 @@ public class InicioActivity extends AppCompatActivity {
                 (Usuario.class,R.layout.blog_row,UsuarioViewHolder.class,databaseReference.child("Usuario").orderByChild("profesion").startAt("")) {
             @Override
             protected void populateViewHolder(UsuarioViewHolder usuarioViewHolder, Usuario usuario, int i) {
+
                 usuarioViewHolder.setNombre(usuario.getNombre());
                 usuarioViewHolder.setProfesion(usuario.getProfesion());
                 usuarioViewHolder.setDescripcion(usuario.getDescripcion());
@@ -114,6 +117,18 @@ public class InicioActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
+
+                /*
+                String idUser = usuario.getUid();
+                if (idUser == user.getUid()){
+                    usuarioViewHolder.mView.setVisibility(View.GONE);
+                    ViewGroup.LayoutParams params = usuarioViewHolder.mView.getLayoutParams();
+                    params.height = 0;
+                    params.width = 0;
+                    params.layoutAnimationParameters = null;
+                    usuarioViewHolder.mView.setLayoutParams(params);
+                }
+                 */
             }
         };
         mBlogList.setAdapter(firebaseRecyclerAdapter);
@@ -153,7 +168,7 @@ public class InicioActivity extends AppCompatActivity {
     // MOSTRAR TOP MENU
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.top_menu,menu);
+        getMenuInflater().inflate(R.menu.top_menu_inicio,menu);
         return true;
     }
 
@@ -161,6 +176,12 @@ public class InicioActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
+            case R.id.iconSearchProfesionist:
+                Intent intent = new Intent(InicioActivity.this,ActivityBuscarProfesionista.class);
+                startActivity(intent);
+                overridePendingTransition(0,0);
+                break;
+
             case R.id.btnSignOut:
                 //Detectar al usuario actual
                 mAuth = FirebaseAuth.getInstance();

@@ -173,20 +173,26 @@ public class MiPerfilActivity extends AppCompatActivity {
 
         HashMap hashMap = new HashMap();
         hashMap.put("nombre",nombre);
-        hashMap.put("profesion",profesion);
+        if (!profesion.equals("")){
+            hashMap.put("profesion",profesion);
+        }else{
+            databaseReference.child("Usuario").child(uid).child("profesion").removeValue();
+        }
         hashMap.put("servicios",servicios);
         hashMap.put("cotizacion",cotizacion);
         hashMap.put("telefono",telefono);
         hashMap.put("descripcion",descripcion);
+        hashMap.put("uid",uid);
 
 
         databaseReference.child("Usuario").child(uid).updateChildren(hashMap);
 
         Toast.makeText(this, "Usuario Actualizado", Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(getApplicationContext(), MiPerfilActivity.class);
-        startActivity(intent);
-        overridePendingTransition(0,0);
+        finish();
+        overridePendingTransition(0, 0);
+        startActivity(getIntent());
+        overridePendingTransition(0, 0);
     }
 
     private void OcultarBoton() {
