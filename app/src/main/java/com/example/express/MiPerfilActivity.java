@@ -38,7 +38,7 @@ public class MiPerfilActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     EditText userNombre, userTelefono, userProfesion, userServicios, userCotizacion, userDescripcion;
-    ImageView photo;
+    ImageView photo, editarFoto;
     Button mbtn_guardar_cambios;
     public String uid = user.getUid();
 
@@ -59,6 +59,7 @@ public class MiPerfilActivity extends AppCompatActivity {
         mbtn_guardar_cambios = findViewById(R.id.btn_guardar_cambios);
         mbtn_guardar_cambios.setEnabled(false);
         photo = (ImageView) findViewById(R.id.myPhoto);
+        editarFoto = (ImageView) findViewById(R.id.editPhoto);
 
         inicializarFirebase();
         MostrarDatos();
@@ -90,20 +91,11 @@ public class MiPerfilActivity extends AppCompatActivity {
             }
         });
 
-        // Mostrar imagen de usuario
-        databaseReference.child("Usuario").child(uid).addValueEventListener(new ValueEventListener() {
+        editarFoto.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.exists()){
-                    Usuario u = snapshot.getValue(Usuario.class);
-                    String imagen = u.getImagen();
-                    Picasso.get().load(imagen).into(photo);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
+            public void onClick(View view) {
+                Intent intent = new Intent(MiPerfilActivity.this,ActivityEditarFoto.class);
+                startActivity(intent);
             }
         });
 
@@ -121,13 +113,18 @@ public class MiPerfilActivity extends AppCompatActivity {
         databaseReference.child("Usuario").child(uid).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Usuario u = snapshot.getValue(Usuario.class);
-                userNombre.setText(u.getNombre());
-                userTelefono.setText(u.getTelefono());
-                userProfesion.setText(u.getProfesion());
-                userServicios.setText(u.getServicios());
-                userCotizacion.setText(u.getCotizacion());
-                userDescripcion.setText(u.getDescripcion());
+                if (snapshot.exists()){
+                    Usuario u = snapshot.getValue(Usuario.class);
+                    userNombre.setText(u.getNombre());
+                    userTelefono.setText(u.getTelefono());
+                    userProfesion.setText(u.getProfesion());
+                    userServicios.setText(u.getServicios());
+                    userCotizacion.setText(u.getCotizacion());
+                    userDescripcion.setText(u.getDescripcion());
+
+                    String imagen = u.getImagen();
+                    Picasso.get().load(imagen).into(photo);
+                }
             }
 
             @Override

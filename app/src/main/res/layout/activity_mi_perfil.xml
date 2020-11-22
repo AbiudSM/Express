@@ -53,13 +53,28 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0">
 
-            <ImageView
-                android:id="@+id/myPhoto"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:padding="15dp"
-                android:background="@drawable/input_box_2"
-                android:layout_gravity="center"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/myPhoto"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:padding="15dp"
+                    android:background="@drawable/input_box_2"
+                    android:layout_centerHorizontal="true"/>
+
+                <ImageView
+                    android:id="@+id/editPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/myPhoto"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_edit"/>
+
+            </RelativeLayout>
 
             <Space
                 android:layout_width="match_parent"

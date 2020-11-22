@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityBuscarProfesionista"></activity>
+        <activity android:name=".ActivityEditarFoto"
+            android:parentActivityName=".MiPerfilActivity"></activity>
+        <activity android:name=".ActivityBuscarProfesionista" />
         <activity
             android:name=".MostrarUsuarioActivity"
             android:parentActivityName=".InicioActivity" />

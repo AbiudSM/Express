@@ -75,7 +75,7 @@ public class MostrarUsuarioActivity extends AppCompatActivity {
                     String servicios = u.getServicios();
                     String descripcion = u.getDescripcion();
                     String imagen = u.getImagen();
-                    String correo = u.getCorreo();
+                    final String correo = u.getCorreo();
 
                     Picasso.get().load(imagen).into(imagenUsuario);
                     nombreUsuario.setText(nombre);
@@ -87,6 +87,19 @@ public class MostrarUsuarioActivity extends AppCompatActivity {
 
                     if((correo != null) && (!correo.equals(""))){
                         correoUsuario.setText(correo);
+                        correoUsuario.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                String [] addresses = new String[1];
+                                addresses[0] = correo;
+                                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                                intent.setType("*/*");
+                                intent.putExtra(Intent.EXTRA_EMAIL, addresses);
+                                if (intent.resolveActivity(getPackageManager()) != null) {
+                                    startActivity(intent);
+                                }
+                            }
+                        });
                     }
 
                     if((cotizacion != null) && (!cotizacion.equals(""))){
@@ -163,7 +176,6 @@ public class MostrarUsuarioActivity extends AppCompatActivity {
 
             }
         });
-
     }
 
     private void inicializarFirebase() {

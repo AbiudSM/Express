@@ -137,7 +137,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="No especificado"
-                    android:textColor="@color/colorWhite"
+                    android:textColor="#039BE5"
                     android:textSize="24sp" />
 
             </LinearLayout>
