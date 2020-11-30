@@ -25,7 +25,7 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:gravity="center_horizontal"
-            android:text="¡Te damos la Bienvenida!" />
+            android:text="@string/te_damos_la_bienvenida" />
 
         <Space
             android:layout_width="match_parent"
@@ -38,7 +38,7 @@
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:gravity="center_horizontal"
-            android:text="¿Qué es lo que buscas?" />
+            android:text="@string/que_es_lo_que_buscas" />
 
         <Space
             android:layout_width="match_parent"
@@ -53,7 +53,7 @@
             android:padding="50dp"
             android:textStyle="bold"
             android:textColor="#004851"
-            android:text="Ofrecer un servicio" />
+            android:text="@string/Ofrecer_un_servicio" />
 
         <Space
             android:layout_width="match_parent"
@@ -68,7 +68,7 @@
             android:padding="50dp"
             android:textStyle="bold"
             android:textColor="#004003"
-            android:text="Solicitar un servicio" />
+            android:text="@string/Ofrecer_un_servicio" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

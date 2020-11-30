@@ -143,9 +143,9 @@ public class ContactosActivity extends AppCompatActivity {
 
             case R.id.btnDeleteAccount:
                 AlertDialog.Builder builder = new AlertDialog.Builder(ContactosActivity.this);
-                builder.setTitle("Eliminar cuenta permanentemente");
-                builder.setMessage("Una vez que elimine la cuenta no podrá recuperarla\n¿Desea eliminar su cuenta?")
-                        .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                builder.setTitle(R.string.Eliminar_cuenta_permanentemente);
+                builder.setMessage(R.string.Una_vez_que_elimine)
+                        .setPositiveButton(R.string.Sí, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 user.delete()

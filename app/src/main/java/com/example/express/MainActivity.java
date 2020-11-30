@@ -49,11 +49,11 @@ public class MainActivity extends AppCompatActivity {
         password = txt_contrasena.getText().toString();
 
         if (email.equals("")){
-            txt_correo.setError("Ingrese un correo");
+            txt_correo.setError("Ingrese un correo / Enter an email");
             return;
         }
         if (password.equals("")){
-            txt_contrasena.setError("Ingrese su contraseña");
+            txt_contrasena.setError("Ingrese su contraseña / Enter your password");
             return;
         }
 
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             if(!user.isEmailVerified()) {
-                                Toast.makeText(MainActivity.this, "Correo electrónico no verificado", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, R.string.Correo_electrónico_no_verificado, Toast.LENGTH_SHORT).show();
                                 irInicioSesionExitoso();
                             }else {
                                 irBienvenida();
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(MainActivity.this, "Correo o contraseña incorrectas.",
+                            Toast.makeText(MainActivity.this, R.string.Correo_o_contraseña_incorrectas,
                                     Toast.LENGTH_SHORT).show();
                             //updateUI(null);
                         }

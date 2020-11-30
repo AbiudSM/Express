@@ -8,9 +8,9 @@
         android:icon="@drawable/ic_search"/>
 
     <item android:id="@+id/btnSignOut"
-        android:title="Cerrar sesión" />
+        android:title="@string/Cerrar_sesión" />
 
     <item android:id="@+id/btnDeleteAccount"
-        android:title="Eliminar cuenta"/>
+        android:title="@string/Eliminar_cuenta"/>
 
 </menu>

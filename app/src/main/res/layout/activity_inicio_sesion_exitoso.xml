@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
             android:gravity="center_horizontal"
-            android:text="Verificación de cuenta"
+            android:text="@string/Verificación_de_cuenta"
             android:textColor="#FFFFFF"
             android:textSize="30sp" />
 
@@ -42,7 +42,7 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hemos enviado un correo a tu cuenta para autenticarla"
+            android:text="@string/Hemos_enviado_un_correo_a_tu_cuenta_para_autenticarla"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:gravity="center_horizontal" />
@@ -61,7 +61,7 @@
             android:linksClickable="true"
             android:longClickable="true"
             android:textStyle="italic"
-            android:text="Volver a enviar correo de verificación"
+            android:text="@string/Volver_a_enviar_correo_de_verificación"
             android:textColor="#54AFFF"
             android:textSize="20sp" />
 

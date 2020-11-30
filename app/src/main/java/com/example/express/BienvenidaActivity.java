@@ -41,9 +41,9 @@ public class BienvenidaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(BienvenidaActivity.this);
-                builder.setTitle("Ofrecer un servicio");
-                builder.setMessage("Si eres un profesionista o trabajador de oficio que desea ofrecer sus servicios a posibles clientes esta es tu opción")
-                        .setPositiveButton("Seleccionar esta opción", new DialogInterface.OnClickListener() {
+                builder.setTitle(R.string.Ofrecer_un_servicio);
+                builder.setMessage(R.string.Si_eres_un_profesionista_o_trabajador)
+                        .setPositiveButton(R.string.Seleccionar_esta_opción, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 Intent intent = new Intent(BienvenidaActivity.this, OfrecerServicioActivity.class);
@@ -63,9 +63,9 @@ public class BienvenidaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(BienvenidaActivity.this);
-                builder.setTitle("Solicitar un servicio");
-                builder.setMessage("Si estás en busca de un servicio o contactar con un profesionista esta es tu opción")
-                        .setPositiveButton("Seleccionar esta opción", new DialogInterface.OnClickListener() {
+                builder.setTitle(R.string.Solicitar_un_servicio);
+                builder.setMessage(R.string.Si_estás_en_busca_de_un_servicio)
+                        .setPositiveButton(R.string.Seleccionar_esta_opción, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 Intent intent = new Intent(BienvenidaActivity.this, SolicitarServicioActivity.class);

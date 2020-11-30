@@ -30,7 +30,7 @@ public class InicioSesionExitoso extends AppCompatActivity {
             public void onClick(View view) {
                 FirebaseUser user = mAuth.getCurrentUser();
                 user.sendEmailVerification();
-                Toast.makeText(InicioSesionExitoso.this, "Correo de verificación enviado", Toast.LENGTH_SHORT).show();
+                Toast.makeText(InicioSesionExitoso.this, R.string.Correo_de_verificación_enviado, Toast.LENGTH_SHORT).show();
             }
         });
     }

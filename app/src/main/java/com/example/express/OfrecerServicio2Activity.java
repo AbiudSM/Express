@@ -58,7 +58,7 @@ public class OfrecerServicio2Activity extends AppCompatActivity {
                     Intent i = new Intent(OfrecerServicio2Activity.this, SubirImagenActivity.class);
                     startActivity(i);
                 }else{
-                    Toast.makeText(OfrecerServicio2Activity.this, "Debe llenar los espacios obligatorios", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(OfrecerServicio2Activity.this, R.string.Debe_llenar_los_espacios_obligatorios, Toast.LENGTH_SHORT).show();
                 }
 
             }

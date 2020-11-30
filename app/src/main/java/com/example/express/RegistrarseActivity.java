@@ -64,11 +64,11 @@ public class RegistrarseActivity extends AppCompatActivity {
         String confimPassword = txt_confirmar_contrasena.getText().toString();
 
         if (email.equals("")){
-            txt_correo.setError("Correo necesario");
+            txt_correo.setError("Correo necesario / Email requeried");
             return;
         }
         if (password.equals("")){
-            txt_contrasena.setError("Contraseña necesaria");
+            txt_contrasena.setError("Contraseña necesaria / Password requeried");
             return;
         }
         if (confimPassword.equals("")){
@@ -90,14 +90,14 @@ public class RegistrarseActivity extends AppCompatActivity {
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                                Toast.makeText(RegistrarseActivity.this, "Error al autenticar su cuenta, favor de ingresar un correo existente.",
+                                Toast.makeText(RegistrarseActivity.this, R.string.Error_al_autenticar_su_cuenta,
                                         Toast.LENGTH_SHORT).show();
                                 updateUI(null);
                             }
                         }
                     });
         }else{
-            Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.Las_contraseñas_no_coinciden, Toast.LENGTH_SHORT).show();
         }
     }
 

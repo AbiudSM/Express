@@ -48,7 +48,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/cardNombre"
-                    android:text="NOMBRE"
+                    android:text="@string/Nombre"
                     android:textColor="@color/colorWhite"
                     android:layout_marginBottom="2dp"
                     android:textSize="20sp"
@@ -58,7 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/cardProfesion"
-                    android:text="Profesión"
+                    android:text="@string/Profesión"
                     android:textSize="16sp"
                     android:textColor="@color/colorWhite"/>
 
@@ -66,7 +66,7 @@
                     android:id="@+id/cardDescripcion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Descripción"
+                    android:text="@string/Descripción"
                     android:textSize="16sp"
                     android:textColor="@color/colorWhite"/>
             </LinearLayout>

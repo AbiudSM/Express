@@ -22,7 +22,7 @@
             android:gravity="center_horizontal"
             android:layout_marginTop="30dp"
             android:textStyle="bold"
-            android:text="Crea una nueva cuenta"
+            android:text="@string/Crea_una_nueva_cuenta"
             android:textColor="#FFFFFF"
             android:textSize="30sp" />
 
@@ -38,7 +38,7 @@
             android:background="@drawable/input_box"
             android:padding="15dp"
             android:textColorHint="#C8C8C8"
-            android:hint="Correo"
+            android:hint="@string/Correo_texto"
             android:inputType="textEmailAddress"
             android:textColor="#FFFFFF" />
 
@@ -51,7 +51,7 @@
             android:background="@drawable/input_box"
             android:padding="15dp"
             android:textColorHint="#C8C8C8"
-            android:hint="Contraseña"
+            android:hint="@string/Contraseña_texto"
             android:inputType="textPassword"
             android:textColor="#FFFFFF" />
 
@@ -64,7 +64,7 @@
             android:background="@drawable/input_box"
             android:padding="15dp"
             android:textColorHint="#C8C8C8"
-            android:hint="Confirmar contraseña"
+            android:hint="@string/Confirmar_contraseña"
             android:inputType="textPassword"
             android:textColor="#FFFFFF" />
 
@@ -75,7 +75,7 @@
             android:background="@drawable/btn_redondo"
             android:padding="20dp"
             android:layout_marginTop="40dp"
-            android:text="Registrarse" />
+            android:text="@string/Registrarse" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

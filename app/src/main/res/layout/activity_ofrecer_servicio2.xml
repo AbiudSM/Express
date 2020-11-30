@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:textStyle="bold"
-                android:text="Ofrecer un servicio"
+                android:text="@string/Ofrecer_un_servicio"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
 
@@ -41,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Información general"
+                android:text="@string/Información_general"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
 
@@ -59,7 +59,7 @@
                 android:background="@drawable/input_box_2"
                 android:paddingHorizontal="15dp"
                 android:textColorHint="#656565"
-                android:hint="Nombre" />
+                android:hint="@string/Nombre" />
 
             <Space
                 android:layout_width="match_parent"
@@ -75,7 +75,7 @@
                 android:background="@drawable/input_box_2"
                 android:paddingHorizontal="15dp"
                 android:textColorHint="#656565"
-                android:hint="Profesión" />
+                android:hint="@string/Profesión" />
 
             <Space
                 android:layout_width="match_parent"
@@ -91,7 +91,7 @@
                 android:background="@drawable/input_box_2"
                 android:paddingHorizontal="15dp"
                 android:textColorHint="#656565"
-                android:hint="Servicios que ofrece" />
+                android:hint="@string/Servicios_que_ofrezco" />
 
             <Space
                 android:layout_width="match_parent"
@@ -107,7 +107,7 @@
                 android:background="@drawable/input_box_2"
                 android:paddingHorizontal="15dp"
                 android:textColorHint="#656565"
-                android:hint="Cotización" />
+                android:hint="@string/Cotización" />
 
             <Space
                 android:layout_width="match_parent"
@@ -123,7 +123,7 @@
                 android:background="@drawable/input_box_2"
                 android:paddingHorizontal="15dp"
                 android:textColorHint="#656565"
-                android:hint="Teléfono" />
+                android:hint="@string/Teléfono" />
 
             <Space
                 android:layout_width="match_parent"

@@ -107,14 +107,14 @@ public class SubirImagenActivity extends AppCompatActivity {
             final Uri uri = data.getData();
 
             foto.setImageURI(uri);
-            mUploadBtn.setText("Cambiar Foto");
+            mUploadBtn.setText(R.string.Cambiar_foto);
             avanzar.setVisibility(View.VISIBLE);
 
             avanzar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    progressDialog.setTitle("Subiendo imagen");
-                    progressDialog.setMessage("Subiento imagen a la nube");
+                    progressDialog.setTitle(R.string.Subiendo_imagen);
+                    progressDialog.setMessage("Upload image to cloud");
                     progressDialog.setCancelable(false);
                     progressDialog.show();
 
@@ -157,7 +157,7 @@ public class SubirImagenActivity extends AppCompatActivity {
                                         databaseReference.child("Usuario").child(uid).updateChildren(hashMap);
 
                                         progressDialog.dismiss();
-                                        Toast.makeText(SubirImagenActivity.this, "Imagen cargada exitosamente", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(SubirImagenActivity.this, R.string.Imagen_cargada_exitosamente, Toast.LENGTH_SHORT).show();
                                         Intent i = new Intent(SubirImagenActivity.this, InicioActivity.class);
                                         startActivity(i);
                                     } else {

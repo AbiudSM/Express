@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="Agrega una foto de perfil"
+            android:text="@string/Agrega_una_foto_de_perfil"
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
@@ -66,7 +66,7 @@
                     android:background="@drawable/btn_redondo"
                     android:padding="20dp"
                     android:gravity="center|center_horizontal"
-                    android:text="Agregar foto"
+                    android:text="@string/Agregar_foto"
                     android:textColor="#000000"
                     android:textSize="18sp" />
 
@@ -85,7 +85,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="25dp"
-                android:text="Omitir"
+                android:text="@string/Omitir"
                 android:textStyle="italic"
                 android:textColor="#FFFFFF"
                 android:textColorHighlight="#009688"

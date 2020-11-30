@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:text="Mi perfil"
+            android:text="@string/Mi_perfil"
             android:textColor="@color/colorWhite"
             android:textSize="34dp" />
 
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:text="Guardar Cambios" />
+            android:text="@string/Guardar_Cambios" />
 
     </RelativeLayout>
 
@@ -99,7 +99,7 @@
                 android:background="@drawable/input_box_2"
                 android:paddingHorizontal="15dp"
                 android:textColorHint="#656565"
-                android:hint="Mi nombre" />
+                android:hint="@string/Mi_nombre" />
 
             <Space
                 android:layout_width="match_parent"
@@ -110,7 +110,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity=""
-                android:text="Teléfono"
+                android:text="@string/Teléfono"
                 android:textColor="@color/colorWhite"
                 android:textSize="20dp" />
 
@@ -124,7 +124,7 @@
                 android:background="@drawable/input_box_2"
                 android:paddingHorizontal="15dp"
                 android:textColorHint="#656565"
-                android:hint="Mi telefóno" />
+                android:hint="@string/Mi_telefóno" />
 
             <Space
                 android:layout_width="match_parent"
@@ -135,7 +135,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity=""
-                android:text="Profesión"
+                android:text="@string/Profesión"
                 android:textColor="@color/colorWhite"
                 android:textSize="20dp" />
 
@@ -149,7 +149,7 @@
                 android:background="@drawable/input_box_2"
                 android:paddingHorizontal="15dp"
                 android:textColorHint="#656565"
-                android:hint="Mi profesión" />
+                android:hint="@string/Mi_profesión" />
 
             <Space
                 android:layout_width="match_parent"
@@ -160,7 +160,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity=""
-                android:text="Servicios"
+                android:text="@string/Servicios"
                 android:textColor="@color/colorWhite"
                 android:textSize="20dp" />
 
@@ -174,7 +174,7 @@
                 android:background="@drawable/input_box_2"
                 android:paddingHorizontal="15dp"
                 android:textColorHint="#656565"
-                android:hint="Servicios que ofrezco" />
+                android:hint="@string/Servicios_que_ofrezco" />
 
             <Space
                 android:layout_width="match_parent"
@@ -185,7 +185,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity=""
-                android:text="Cotización"
+                android:text="@string/Cotización"
                 android:textColor="@color/colorWhite"
                 android:textSize="20dp" />
 
@@ -199,7 +199,7 @@
                 android:background="@drawable/input_box_2"
                 android:paddingHorizontal="15dp"
                 android:textColorHint="#656565"
-                android:hint="Cotización base por trabajo" />
+                android:hint="@string/Cotización_base_por_trabajo" />
 
             <Space
                 android:layout_width="match_parent"
@@ -210,7 +210,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity=""
-                android:text="Descripción"
+                android:text="@string/Descripción"
                 android:textColor="@color/colorWhite"
                 android:textSize="20dp" />
 
@@ -224,7 +224,7 @@
                 android:textColorHint="#656565"
                 android:ems="10"
                 android:gravity="start|top"
-                android:hint="Descripción sobre el trabajo que ofrezco"
+                android:hint="@string/Descripción_sobre_el_trabajo_que_ofrezco"
                 android:inputType="textMultiLine" />
 
         </LinearLayout>

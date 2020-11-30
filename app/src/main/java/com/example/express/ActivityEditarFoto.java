@@ -117,7 +117,7 @@ public class ActivityEditarFoto extends AppCompatActivity {
             avanzar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    progressDialog.setTitle("Subiendo imagen");
+                    progressDialog.setTitle(R.string.Subiendo_imagen);
                     progressDialog.setMessage("Subiento imagen a la nube");
                     progressDialog.setCancelable(false);
                     progressDialog.show();
@@ -161,7 +161,7 @@ public class ActivityEditarFoto extends AppCompatActivity {
                                         databaseReference.child("Usuario").child(uid).updateChildren(hashMap);
 
                                         progressDialog.dismiss();
-                                        Toast.makeText(ActivityEditarFoto.this, "Imagen cargada exitosamente", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(ActivityEditarFoto.this, R.string.Imagen_cargada_exitosamente, Toast.LENGTH_SHORT).show();
                                         Intent i = new Intent(ActivityEditarFoto.this, MiPerfilActivity.class);
                                         startActivity(i);
                                     } else {

@@ -135,7 +135,7 @@ public class MostrarUsuarioActivity extends AppCompatActivity {
                             hashMap.put(uid,true);
 
                             databaseReference.child("Usuario").child(idUsuario).child("Contactos").updateChildren(hashMap);
-                            Toast.makeText(MostrarUsuarioActivity.this, "Usuario guardado en contactos", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MostrarUsuarioActivity.this, R.string.Usuario_guardado_en_contactos, Toast.LENGTH_SHORT).show();
                         }
                     });
 
@@ -147,15 +147,15 @@ public class MostrarUsuarioActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View view) {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(MostrarUsuarioActivity.this);
-                                builder.setTitle("Eliminar contacto");
-                                builder.setMessage("¿Desea eliminar este contacto?")
-                                        .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                                builder.setTitle(R.string.Eliminar_contacto);
+                                builder.setMessage(R.string.Desea_eliminar_este_contacto)
+                                        .setPositiveButton(R.string.Sí, new DialogInterface.OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialogInterface, int i) {
                                                 databaseReference.child("Usuario").child(idUsuario).child("Contactos").child(uid).removeValue();
                                                 Intent intent = new Intent(MostrarUsuarioActivity.this,ContactosActivity.class);
                                                 startActivity(intent);
-                                                Toast.makeText(MostrarUsuarioActivity.this, "Usuario eliminado de contactos", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(MostrarUsuarioActivity.this, R.string.Usuario_eliminado_de_contactos, Toast.LENGTH_SHORT).show();
                                             }
                                         })
                                         .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {

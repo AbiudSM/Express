@@ -50,7 +50,7 @@
                 android:background="@drawable/btn_redondo"
                 android:paddingHorizontal="15dp"
                 android:textColorHint="#656565"
-                android:hint="Buscar profesionista" />
+                android:hint="@string/Buscar_profesionista" />
 
         </RelativeLayout>
 
