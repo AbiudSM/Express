@@ -907,6 +907,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_logo_express_background
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -2122,6 +2123,9 @@ menu top_menu
 menu top_menu_inicio
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap ic_logo_express
+mipmap ic_logo_express_foreground
+mipmap ic_logo_express_round
 plurals mtrl_badge_content_description
 string Agrega_una_descripción_del_trabajo_que_ofreces
 string Agrega_una_foto_de_perfil

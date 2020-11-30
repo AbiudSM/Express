@@ -40,12 +40,12 @@
 23-->[androidx.core:core:1.2.0] C:\Users\rober\.gradle\caches\transforms-2\files-2.1\e5357b0b880d2be0ed83398576c19d42\core-1.2.0\AndroidManifest.xml:24:18-86
 24        android:debuggable="true"
 25        android:extractNativeLibs="false"
-26        android:icon="@mipmap/ic_launcher"
-26-->C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:11:9-43
+26        android:icon="@mipmap/ic_logo_express"
+26-->C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:11:9-47
 27        android:label="@string/app_name"
 27-->C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:12:9-41
-28        android:roundIcon="@mipmap/ic_launcher_round"
-28-->C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:13:9-54
+28        android:roundIcon="@mipmap/ic_logo_express_round"
+28-->C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:13:9-58
 29        android:supportsRtl="true"
 29-->C:\Users\rober\AndroidStudioProjects\Express\app\src\main\AndroidManifest.xml:14:9-35
 30        android:testOnly="true"
