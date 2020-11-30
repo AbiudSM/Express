@@ -1498,6 +1498,7 @@ drawable ic_add_photo
 drawable ic_contacts
 drawable ic_delete
 drawable ic_edit
+drawable ic_exit
 drawable ic_home
 drawable ic_launcher_background
 drawable ic_launcher_foreground

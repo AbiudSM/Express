@@ -7,10 +7,13 @@
     android:background="@color/backgroudPrimary"
     tools:context=".MainActivity">
 
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -109,5 +112,7 @@
             android:text="@string/Registrate_aquí" />
 
     </LinearLayout>
+</ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

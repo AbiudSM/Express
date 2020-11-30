@@ -7,75 +7,79 @@
     android:background="@color/backgroudPrimary"
     tools:context=".RegistrarseActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
-
-
-        <TextView
-            android:id="@+id/textView2"
+        android:layout_margin="20dp">
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="30dp"
-            android:textStyle="bold"
-            android:text="@string/Crea_una_nueva_cuenta"
-            android:textColor="#FFFFFF"
-            android:textSize="30sp" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="60dp" />
 
-        <EditText
-            android:id="@+id/correo_singUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:background="@drawable/input_box"
-            android:padding="15dp"
-            android:textColorHint="#C8C8C8"
-            android:hint="@string/Correo_texto"
-            android:inputType="textEmailAddress"
-            android:textColor="#FFFFFF" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:text="@string/Crea_una_nueva_cuenta"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp" />
 
-        <EditText
-            android:id="@+id/contrasena_singUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:ems="10"
-            android:background="@drawable/input_box"
-            android:padding="15dp"
-            android:textColorHint="#C8C8C8"
-            android:hint="@string/Contraseña_texto"
-            android:inputType="textPassword"
-            android:textColor="#FFFFFF" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
 
-        <EditText
-            android:id="@+id/confirmar_contrasena_singUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:ems="10"
-            android:background="@drawable/input_box"
-            android:padding="15dp"
-            android:textColorHint="#C8C8C8"
-            android:hint="@string/Confirmar_contraseña"
-            android:inputType="textPassword"
-            android:textColor="#FFFFFF" />
+            <EditText
+                android:id="@+id/correo_singUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:background="@drawable/input_box"
+                android:padding="15dp"
+                android:textColorHint="#C8C8C8"
+                android:hint="@string/Correo_texto"
+                android:inputType="textEmailAddress"
+                android:textColor="#FFFFFF" />
 
-        <Button
-            android:id="@+id/singUpButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/btn_redondo"
-            android:padding="20dp"
-            android:layout_marginTop="40dp"
-            android:text="@string/Registrarse" />
+            <EditText
+                android:id="@+id/contrasena_singUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:background="@drawable/input_box"
+                android:padding="15dp"
+                android:textColorHint="#C8C8C8"
+                android:hint="@string/Contraseña_texto"
+                android:inputType="textPassword"
+                android:textColor="#FFFFFF" />
 
-    </LinearLayout>
+            <EditText
+                android:id="@+id/confirmar_contrasena_singUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:background="@drawable/input_box"
+                android:padding="15dp"
+                android:textColorHint="#C8C8C8"
+                android:hint="@string/Confirmar_contraseña"
+                android:inputType="textPassword"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/singUpButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_redondo"
+                android:padding="20dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/Registrarse" />
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
