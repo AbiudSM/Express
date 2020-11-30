@@ -101,7 +101,11 @@
                     android:text="@string/Telefono_dos_puntos"
                     android:textStyle="bold"
                     android:textColor="#FFFFFF"
-                    android:textSize="24sp" />
+                    android:textSize="20sp" />
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/usuarioTelefono"
@@ -109,7 +113,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/No_especificado"
                     android:textColor="#039BE5"
-                    android:textSize="24sp" />
+                    android:textSize="20sp" />
             </LinearLayout>
 
 
@@ -130,21 +134,22 @@
                     android:text="@string/Correo_dos_puntos"
                     android:textColor="@color/colorWhite"
                     android:textStyle="bold"
-                    android:textSize="24sp" />
+                    android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/usuarioCorreo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/No_especificado"
-                    android:textColor="#039BE5"
-                    android:textSize="24sp" />
 
             </LinearLayout>
 
+            <TextView
+                android:id="@+id/usuarioCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/No_especificado"
+                android:textColor="#039BE5"
+                android:textSize="20sp" />
+
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="30dp" />
+                android:layout_height="20dp" />
 
 
             <LinearLayout
@@ -159,7 +164,11 @@
                     android:text="@string/Cotización_dos_puntos"
                     android:textStyle="bold"
                     android:textColor="@color/colorWhite"
-                    android:textSize="22sp" />
+                    android:textSize="20sp" />
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/usuarioCotizacion"
@@ -167,7 +176,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/No_especificado"
                     android:textColor="@color/colorWhite"
-                    android:textSize="22sp" />
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -186,7 +195,11 @@
                     android:text="@string/Servicios_dos_puntos"
                     android:textStyle="bold"
                     android:textColor="@color/colorWhite"
-                    android:textSize="22sp" />
+                    android:textSize="20sp" />
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/usuarioServicios"
@@ -194,7 +207,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/No_especificado"
                     android:textColor="@color/colorWhite"
-                    android:textSize="22sp" />
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <Space
@@ -207,7 +220,7 @@
                 android:text="@string/Descripción_dos_puntos"
                 android:textStyle="bold"
                 android:textColor="@color/colorWhite"
-                android:textSize="22sp" />
+                android:textSize="20sp" />
 
             <Space
                 android:layout_width="match_parent"
@@ -219,7 +232,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/No_especificado"
                 android:textColor="@color/colorWhite"
-                android:textSize="22sp" />
+                android:textSize="20sp" />
         </LinearLayout>
     </ScrollView>
 
