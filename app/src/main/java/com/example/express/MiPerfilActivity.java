@@ -1,8 +1,10 @@
 package com.example.express;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -17,6 +19,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.express.models.Usuario;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
@@ -154,6 +158,35 @@ public class MiPerfilActivity extends AppCompatActivity {
                 //SIGN OUT
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                break;
+
+            case R.id.btnDeleteAccount:
+                AlertDialog.Builder builder = new AlertDialog.Builder(MiPerfilActivity.this);
+                builder.setTitle("Eliminar cuenta permanentemente");
+                builder.setMessage("Una vez que elimine la cuenta no podrá recuperarla\n¿Desea eliminar su cuenta?")
+                        .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                user.delete()
+                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                if (task.isSuccessful()) {
+                                                    Toast.makeText(MiPerfilActivity.this, "Account deleted", Toast.LENGTH_SHORT).show();
+                                                }
+                                            }
+                                        });
+
+                                Intent intent = new Intent(MiPerfilActivity.this, MainActivity.class);
+                                startActivity(intent);
+                            }
+                        })
+                        .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                            }
+                        }).show();
                 break;
         }
         return super.onOptionsItemSelected(item);

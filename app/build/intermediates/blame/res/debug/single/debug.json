@@ -24,6 +24,10 @@
         "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_editar_foto.xml.flat",
+        "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\layout\\activity_editar_foto.xml"
+    },
+    {
         "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_contactos.xml.flat",
         "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\layout\\activity_contactos.xml"
     },
@@ -98,6 +102,10 @@
     {
         "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_edit.xml.flat",
+        "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\drawable\\ic_edit.xml"
     },
     {
         "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_solicitar_servicio.xml.flat",

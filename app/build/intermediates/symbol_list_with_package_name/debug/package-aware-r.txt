@@ -1496,6 +1496,7 @@ drawable ic_account
 drawable ic_add_photo
 drawable ic_contacts
 drawable ic_delete
+drawable ic_edit
 drawable ic_home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -1693,6 +1694,7 @@ id dimensions
 id direct
 id disableHome
 id dropdown_menu
+id editPhoto
 id edit_query
 id end
 id end_padder
@@ -2021,6 +2023,7 @@ layout abc_tooltip
 layout activity_bienvenida
 layout activity_buscar_profesionista
 layout activity_contactos
+layout activity_editar_foto
 layout activity_inicio
 layout activity_inicio_sesion_exitoso
 layout activity_main

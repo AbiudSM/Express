@@ -29,6 +29,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.express.ActivityEditarFoto"
+            android:parentActivityName="com.example.express.MiPerfilActivity" />
         <activity android:name="com.example.express.ActivityBuscarProfesionista" />
         <activity
             android:name="com.example.express.MostrarUsuarioActivity"
