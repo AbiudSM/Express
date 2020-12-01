@@ -29,8 +29,14 @@ public class InicioSesionExitoso extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FirebaseUser user = mAuth.getCurrentUser();
-                user.sendEmailVerification();
-                Toast.makeText(InicioSesionExitoso.this, R.string.Correo_de_verificación_enviado, Toast.LENGTH_SHORT).show();
+                user.reload();
+                if(user.isEmailVerified()){
+                    Intent i = new Intent(getApplicationContext(), InicioActivity.class);
+                    startActivity(i);
+                }else{
+                    user.sendEmailVerification();
+                    Toast.makeText(InicioSesionExitoso.this, R.string.Correo_de_verificación_enviado, Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -39,6 +45,7 @@ public class InicioSesionExitoso extends AppCompatActivity {
     public void onStart() {
         super.onStart();
         FirebaseUser user = mAuth.getCurrentUser();
+        user.reload();
         if(user.isEmailVerified()){
             Intent i = new Intent(this, InicioActivity.class);
             startActivity(i);

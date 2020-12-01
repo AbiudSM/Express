@@ -148,15 +148,10 @@ public class ContactosActivity extends AppCompatActivity {
                         .setPositiveButton(R.string.Sí, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                user.delete()
-                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                            @Override
-                                            public void onComplete(@NonNull Task<Void> task) {
-                                                if (task.isSuccessful()) {
-                                                    Toast.makeText(ContactosActivity.this, "Account deleted", Toast.LENGTH_SHORT).show();
-                                                }
-                                            }
-                                        });
+                                user.delete();
+                                databaseReference.child("Usuario").child(uid).removeValue();
+
+                                Toast.makeText(ContactosActivity.this, "Account deleted", Toast.LENGTH_SHORT).show();
 
                                 Intent intent = new Intent(ContactosActivity.this, MainActivity.class);
                                 startActivity(intent);

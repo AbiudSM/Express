@@ -31,7 +31,8 @@
             android:parentActivityName=".BienvenidaActivity" />
         <activity android:name=".BienvenidaActivity" />
         <activity android:name=".InicioActivity" />
-        <activity android:name=".InicioSesionExitoso" />
+        <activity android:name=".InicioSesionExitoso"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".RegistrarseActivity"
             android:parentActivityName=".MainActivity" />
