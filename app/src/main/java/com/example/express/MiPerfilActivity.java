@@ -224,162 +224,165 @@ public class MiPerfilActivity extends AppCompatActivity {
         databaseReference.child("Usuario").child(uid).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Usuario u = snapshot.getValue(Usuario.class);
-                final String newNombre = u.getNombre();
-                userNombre.addTextChangedListener(new TextWatcher() {
-                    @Override
-                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                        if((charSequence.equals(newNombre))){
-                            mbtn_guardar_cambios.setEnabled(false);
-                        }else{
-                            mbtn_guardar_cambios.setEnabled(true);
+                if (snapshot.exists()){
+                    Usuario u = snapshot.getValue(Usuario.class);
+                    final String newNombre = u.getNombre();
+                    userNombre.addTextChangedListener(new TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                            if((charSequence.equals(newNombre))){
+                                mbtn_guardar_cambios.setEnabled(false);
+                            }else{
+                                mbtn_guardar_cambios.setEnabled(true);
+                            }
                         }
-                    }
 
-                    @Override
-                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                        @Override
+                        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                    }
-
-                    @Override
-                    public void afterTextChanged(Editable editable) {
-                        if((editable.equals(newNombre))){
-                            mbtn_guardar_cambios.setEnabled(false);
-                        }else{
-                            mbtn_guardar_cambios.setEnabled(true);
                         }
-                    }
-                });
 
-                final String newProfesion = u.getProfesion();
-                userProfesion.addTextChangedListener(new TextWatcher() {
-                    @Override
-                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                        if((charSequence.equals(newProfesion))){
-                            mbtn_guardar_cambios.setEnabled(false);
-                        }else{
-                            mbtn_guardar_cambios.setEnabled(true);
+                        @Override
+                        public void afterTextChanged(Editable editable) {
+                            if((editable.equals(newNombre))){
+                                mbtn_guardar_cambios.setEnabled(false);
+                            }else{
+                                mbtn_guardar_cambios.setEnabled(true);
+                            }
                         }
-                    }
+                    });
 
-                    @Override
-                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-                    }
-
-                    @Override
-                    public void afterTextChanged(Editable editable) {
-                        if((editable.equals(newProfesion))){
-                            mbtn_guardar_cambios.setEnabled(false);
-                        }else{
-                            mbtn_guardar_cambios.setEnabled(true);
+                    final String newProfesion = u.getProfesion();
+                    userProfesion.addTextChangedListener(new TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                            if((charSequence.equals(newProfesion))){
+                                mbtn_guardar_cambios.setEnabled(false);
+                            }else{
+                                mbtn_guardar_cambios.setEnabled(true);
+                            }
                         }
-                    }
-                });
 
-                final String newServicios = u.getServicios();
-                userServicios.addTextChangedListener(new TextWatcher() {
-                    @Override
-                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                        if((charSequence.equals(newServicios))){
-                            mbtn_guardar_cambios.setEnabled(false);
-                        }else{
-                            mbtn_guardar_cambios.setEnabled(true);
+                        @Override
+                        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
                         }
-                    }
 
-                    @Override
-                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-                    }
-
-                    @Override
-                    public void afterTextChanged(Editable editable) {
-                        if((editable.equals(newServicios))){
-                            mbtn_guardar_cambios.setEnabled(false);
-                        }else{
-                            mbtn_guardar_cambios.setEnabled(true);
+                        @Override
+                        public void afterTextChanged(Editable editable) {
+                            if((editable.equals(newProfesion))){
+                                mbtn_guardar_cambios.setEnabled(false);
+                            }else{
+                                mbtn_guardar_cambios.setEnabled(true);
+                            }
                         }
-                    }
-                });
+                    });
 
-                final String newCotizacion = u.getCotizacion();
-                userCotizacion.addTextChangedListener(new TextWatcher() {
-                    @Override
-                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                        if((charSequence.equals(newCotizacion))){
-                            mbtn_guardar_cambios.setEnabled(false);
-                        }else{
-                            mbtn_guardar_cambios.setEnabled(true);
+                    final String newServicios = u.getServicios();
+                    userServicios.addTextChangedListener(new TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                            if((charSequence.equals(newServicios))){
+                                mbtn_guardar_cambios.setEnabled(false);
+                            }else{
+                                mbtn_guardar_cambios.setEnabled(true);
+                            }
                         }
-                    }
 
-                    @Override
-                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                        @Override
+                        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                    }
-
-                    @Override
-                    public void afterTextChanged(Editable editable) {
-                        if((editable.equals(newCotizacion))){
-                            mbtn_guardar_cambios.setEnabled(false);
-                        }else{
-                            mbtn_guardar_cambios.setEnabled(true);
                         }
-                    }
-                });
 
-                final String newTelefono = u.getTelefono();
-                userTelefono.addTextChangedListener(new TextWatcher() {
-                    @Override
-                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                        if((charSequence.equals(newTelefono))){
-                            mbtn_guardar_cambios.setEnabled(false);
-                        }else{
-                            mbtn_guardar_cambios.setEnabled(true);
+                        @Override
+                        public void afterTextChanged(Editable editable) {
+                            if((editable.equals(newServicios))){
+                                mbtn_guardar_cambios.setEnabled(false);
+                            }else{
+                                mbtn_guardar_cambios.setEnabled(true);
+                            }
                         }
-                    }
+                    });
 
-                    @Override
-                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-                    }
-
-                    @Override
-                    public void afterTextChanged(Editable editable) {
-                        if((editable.equals(newTelefono))){
-                            mbtn_guardar_cambios.setEnabled(false);
-                        }else{
-                            mbtn_guardar_cambios.setEnabled(true);
+                    final String newCotizacion = u.getCotizacion();
+                    userCotizacion.addTextChangedListener(new TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                            if((charSequence.equals(newCotizacion))){
+                                mbtn_guardar_cambios.setEnabled(false);
+                            }else{
+                                mbtn_guardar_cambios.setEnabled(true);
+                            }
                         }
-                    }
-                });
 
-                final String newDescripcion = u.getDescripcion();
-                userDescripcion.addTextChangedListener(new TextWatcher() {
-                    @Override
-                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                        if((charSequence.equals(newDescripcion))){
-                            mbtn_guardar_cambios.setEnabled(false);
-                        }else{
-                            mbtn_guardar_cambios.setEnabled(true);
+                        @Override
+                        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
                         }
-                    }
 
-                    @Override
-                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-                    }
-
-                    @Override
-                    public void afterTextChanged(Editable editable) {
-                        if((editable.equals(newDescripcion))){
-                            mbtn_guardar_cambios.setEnabled(false);
-                        }else{
-                            mbtn_guardar_cambios.setEnabled(true);
+                        @Override
+                        public void afterTextChanged(Editable editable) {
+                            if((editable.equals(newCotizacion))){
+                                mbtn_guardar_cambios.setEnabled(false);
+                            }else{
+                                mbtn_guardar_cambios.setEnabled(true);
+                            }
                         }
-                    }
-                });
+                    });
+
+                    final String newTelefono = u.getTelefono();
+                    userTelefono.addTextChangedListener(new TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                            if((charSequence.equals(newTelefono))){
+                                mbtn_guardar_cambios.setEnabled(false);
+                            }else{
+                                mbtn_guardar_cambios.setEnabled(true);
+                            }
+                        }
+
+                        @Override
+                        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                        }
+
+                        @Override
+                        public void afterTextChanged(Editable editable) {
+                            if((editable.equals(newTelefono))){
+                                mbtn_guardar_cambios.setEnabled(false);
+                            }else{
+                                mbtn_guardar_cambios.setEnabled(true);
+                            }
+                        }
+                    });
+
+                    final String newDescripcion = u.getDescripcion();
+                    userDescripcion.addTextChangedListener(new TextWatcher() {
+                        @Override
+                        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                            if((charSequence.equals(newDescripcion))){
+                                mbtn_guardar_cambios.setEnabled(false);
+                            }else{
+                                mbtn_guardar_cambios.setEnabled(true);
+                            }
+                        }
+
+                        @Override
+                        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                        }
+
+                        @Override
+                        public void afterTextChanged(Editable editable) {
+                            if((editable.equals(newDescripcion))){
+                                mbtn_guardar_cambios.setEnabled(false);
+                            }else{
+                                mbtn_guardar_cambios.setEnabled(true);
+                            }
+                        }
+                    });
+                }
+
             }
 
             @Override

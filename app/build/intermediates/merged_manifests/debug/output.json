@@ -21,7 +21,7 @@
       "properties": {
         "packageId": "com.example.express",
         "split": "",
-        "minSdkVersion": "28"
+        "minSdkVersion": "21"
       }
     }
   ]
