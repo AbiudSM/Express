@@ -45,6 +45,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array zona
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -1454,6 +1455,7 @@ drawable avd_show_password
 drawable btn1
 drawable btn2
 drawable btn3
+drawable btn_calificar
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1495,6 +1497,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_account
 drawable ic_add_photo
+drawable ic_close
 drawable ic_contacts
 drawable ic_delete
 drawable ic_edit
@@ -1510,6 +1513,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_next
 drawable ic_save
 drawable ic_search
+drawable ic_star
 drawable ic_verified
 drawable input_box
 drawable input_box_2
@@ -1622,6 +1626,7 @@ id all
 id always
 id async
 id auto
+id barra_calificacion
 id barrier
 id beginning
 id blocking
@@ -1633,6 +1638,7 @@ id btnSignOut
 id btn_OfrecerServicio
 id btn_SolicitarServicio
 id btn_avanzar
+id btn_enviar_calificacion
 id btn_guardar_cambios
 id btn_guardar_contacto
 id btn_regresar
@@ -1661,6 +1667,7 @@ id chronometer
 id clear_text
 id clip_horizontal
 id clip_vertical
+id close_popup
 id collapseActionView
 id confirm_button
 id confirmar_contrasena_singUp
@@ -1730,6 +1737,7 @@ id icon_group
 id icon_only
 id ifRoom
 id image
+id img_calificar
 id img_foto
 id info
 id iniciarSesion
@@ -1842,6 +1850,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id show_rating_bar
 id singUpButton
 id skipCollapsed
 id slide
@@ -1961,6 +1970,7 @@ id withinBounds
 id wrap
 id wrap_content
 id zero_corner_chip
+id zona_spinner
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
@@ -2037,6 +2047,7 @@ layout activity_registrarse
 layout activity_solicitar_servicio
 layout activity_subir_imagen
 layout blog_row
+layout calificar_popup
 layout crop_image_activity
 layout crop_image_view
 layout custom_dialog
@@ -2131,6 +2142,7 @@ string Agrega_una_descripción_del_trabajo_que_ofreces
 string Agrega_una_foto_de_perfil
 string Agregar_foto
 string Buscar_profesionista
+string Calificar_trabajador
 string Cambiar_foto
 string Cerrar_sesión
 string Confirmar_contraseña
@@ -2155,6 +2167,7 @@ string Eliminar_contacto
 string Eliminar_cuenta
 string Eliminar_cuenta_permanentemente
 string Eliminar_foto
+string Enviar
 string Error_al_autenticar_su_cuenta
 string Guardar_Cambios
 string Hemos_enviado_un_correo_a_tu_cuenta_para_autenticarla
@@ -2193,6 +2206,7 @@ string Usuario_eliminado_de_contactos
 string Usuario_guardado_en_contactos
 string Verificación_de_cuenta
 string Volver_a_enviar_correo_de_verificación
+string Zona
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

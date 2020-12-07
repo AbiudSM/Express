@@ -32,6 +32,10 @@
         "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\mipmap-xhdpi\\ic_logo_express.png"
     },
     {
+        "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_close.xml.flat",
+        "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\drawable\\ic_close.xml"
+    },
+    {
         "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_editar_foto.xml.flat",
         "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\layout\\activity_editar_foto.xml"
     },
@@ -112,8 +116,16 @@
         "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_logo_express_foreground.png"
     },
     {
+        "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\layout_calificar_popup.xml.flat",
+        "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\layout\\calificar_popup.xml"
+    },
+    {
         "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_save.xml.flat",
         "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\drawable\\ic_save.xml"
+    },
+    {
+        "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_calificar.xml.flat",
+        "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\drawable\\btn_calificar.xml"
     },
     {
         "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn3.xml.flat",
@@ -254,6 +266,10 @@
     {
         "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add_photo.xml.flat",
         "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\drawable\\ic_add_photo.xml"
+    },
+    {
+        "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_star.xml.flat",
+        "source": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\src\\main\\res\\drawable\\ic_star.xml"
     },
     {
         "merged": "C:\\Users\\rober\\AndroidStudioProjects\\Express\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",

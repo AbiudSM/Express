@@ -7,11 +7,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +36,9 @@ public class MostrarUsuarioActivity extends AppCompatActivity {
     ImageView imagenUsuario, eliminarContacto, guardarContacto;
     TextView nombreUsuario, profesionUsuario, telefonoUsuario, correoUsuario, cotizacionUsuario, serviciosUsuario, descripcionUsuario;
 
+    Dialog myDialog;
+    RatingBar showRatingBar;
+
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
@@ -45,6 +51,8 @@ public class MostrarUsuarioActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mostrar_usuario);
         inicializarFirebase();
 
+        myDialog = new Dialog(this);
+
         guardarContacto = (ImageView) findViewById(R.id.btn_guardar_contacto);
 
         nombreUsuario = (TextView) findViewById(R.id.usuarioNombre);
@@ -55,6 +63,8 @@ public class MostrarUsuarioActivity extends AppCompatActivity {
         serviciosUsuario = (TextView) findViewById(R.id.usuarioServicios);
         descripcionUsuario = (TextView) findViewById(R.id.usuarioDescripcion);
         imagenUsuario = (ImageView) findViewById(R.id.userImage);
+
+        showRatingBar = (RatingBar) findViewById(R.id.show_rating_bar);
 
         eliminarContacto = (ImageView) findViewById(R.id.btnEliminarContacto);
         eliminarContacto.setVisibility(View.INVISIBLE);
@@ -76,11 +86,18 @@ public class MostrarUsuarioActivity extends AppCompatActivity {
                     String descripcion = u.getDescripcion();
                     String imagen = u.getImagen();
                     final String correo = u.getCorreo();
+                    float ratio = (float) u.getRatio();
 
+                    // Mostrar imagen del usuario
                     Picasso.get().load(imagen).into(imagenUsuario);
                     nombreUsuario.setText(nombre);
                     profesionUsuario.setText(profesion);
 
+                    // Mostrar rating del usuario
+                    showRatingBar.setRating((float) ratio);
+
+
+                    // Mostrar datos del usuario
                     if((telefono != null) && (!telefono.equals(""))){
                         telefonoUsuario.setText(telefono);
                     }
@@ -176,12 +193,102 @@ public class MostrarUsuarioActivity extends AppCompatActivity {
 
             }
         });
-    }
+
+        // Ocultar boton
+        databaseReference.child("Usuario").child(idUsuario).child("Votados").child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()){
+                    ImageView calificarUsuario = (ImageView) findViewById(R.id.img_calificar);
+                    calificarUsuario.setVisibility(View.INVISIBLE);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+    } // Fin onCreate
 
     private void inicializarFirebase() {
         FirebaseApp.initializeApp(this);
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
+    }
+
+    // Popup calificar trabajador
+    public void ShowPopup(View v){
+        myDialog.setContentView(R.layout.calificar_popup);
+        RatingBar ratingBar = (RatingBar) myDialog.findViewById(R.id.barra_calificacion);
+        final Button btnEnviarCalificacion = (Button) myDialog.findViewById(R.id.btn_enviar_calificacion);
+        ImageView closePopup = (ImageView) myDialog.findViewById(R.id.close_popup);
+
+        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, final float rating, boolean b) {
+                btnEnviarCalificacion.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        CalificarUsuario(rating);
+                        myDialog.dismiss();
+                    }
+                });
+            }
+        });
+
+        // Cerrar popup calificar usuario
+        closePopup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.dismiss();
+            }
+        });
+
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
+    }
+
+    private void CalificarUsuario(final float rating) {
+
+        final String idUsuario = getIntent().getStringExtra("UsuarioID");
+        databaseReference.child("Usuario").child(idUsuario).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()){
+                    Usuario u = snapshot.getValue(Usuario.class);
+                    float suma = (float) u.getSuma();
+                    int votantes = u.getVotantes();
+
+                    float newSuma = suma + rating;
+                    float newVotantes = votantes + 1;
+                    float ratio = (float) newSuma / newVotantes;
+
+                    HashMap hashMap = new HashMap();
+                    hashMap.put("suma",newSuma);
+                    hashMap.put("votantes",newVotantes);
+                    hashMap.put("ratio",ratio);
+
+                    HashMap usuarioVotado = new HashMap();
+                    usuarioVotado.put(uid, true);
+
+                    databaseReference.child("Usuario").child(idUsuario).updateChildren(hashMap);
+                    databaseReference.child("Usuario").child(idUsuario).child("Votados").updateChildren(usuarioVotado);
+
+                    finish();
+                    overridePendingTransition(0, 0);
+                    startActivity(getIntent());
+                    overridePendingTransition(0, 0);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
     }
 
 

@@ -8,9 +8,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.express.models.Usuario;
@@ -20,13 +23,15 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
 import java.util.UUID;
 
-public class OfrecerServicio2Activity extends AppCompatActivity {
+public class OfrecerServicio2Activity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     EditText userNombre, userProfesion, userServicios, userCotizacion, userTelefono;
     public ImageView avanzar;
     public boolean band = true;
+    String zona;
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
@@ -63,6 +68,12 @@ public class OfrecerServicio2Activity extends AppCompatActivity {
 
             }
         });
+
+        Spinner spinner = findViewById(R.id.zona_spinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.zona, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
     }
 
     private void UpdateUser() {
@@ -84,8 +95,16 @@ public class OfrecerServicio2Activity extends AppCompatActivity {
         u.setTelefono(telefono);
         u.setDescripcion(descripcion);
         u.setCorreo(correo);
+        u.setZona(zona);
 
-        databaseReference.child("Usuario").child(u.getUid()).setValue(u);
+        float suma = (float) 0.0;
+        u.setSuma(suma);
+        int votantes = 0;
+        u.setVotantes(votantes);
+        float ratio = (float) 0.0;
+        u.setRatio(ratio);
+
+        databaseReference.child("Usuario").child(uid).setValue(u);
     }
 
     private void inicializarFirebase() {
@@ -109,5 +128,15 @@ public class OfrecerServicio2Activity extends AppCompatActivity {
         }
 
         return band;
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+        zona = adapterView.getItemAtPosition(position).toString();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }

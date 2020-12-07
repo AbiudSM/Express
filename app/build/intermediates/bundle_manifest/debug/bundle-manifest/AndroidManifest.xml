@@ -47,7 +47,9 @@
             android:parentActivityName="com.example.express.BienvenidaActivity" />
         <activity android:name="com.example.express.BienvenidaActivity" />
         <activity android:name="com.example.express.InicioActivity" />
-        <activity android:name="com.example.express.InicioSesionExitoso" />
+        <activity
+            android:name="com.example.express.InicioSesionExitoso"
+            android:parentActivityName="com.example.express.MainActivity" />
         <activity
             android:name="com.example.express.RegistrarseActivity"
             android:parentActivityName="com.example.express.MainActivity" />

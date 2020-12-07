@@ -24,6 +24,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,7 +47,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InicioActivity extends AppCompatActivity {
+public class InicioActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     BottomNavigationView mBottomNavigationView;
     FirebaseAuth mAuth;
@@ -57,6 +58,7 @@ public class InicioActivity extends AppCompatActivity {
     Usuario usuarioSelected;
 
     private RecyclerView mBlogList;
+    String zona;
 
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     public String uid = user.getUid();
@@ -96,14 +98,62 @@ public class InicioActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        final Spinner spinner = findViewById(R.id.zona_spinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.zona, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
+        databaseReference.child("Usuario").child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()){
+                    Usuario u = snapshot.getValue(Usuario.class);
+                    String ciudad = u.getZona();
+                    zona = ciudad;
+                    int position;
+                    
+                    switch (ciudad){
+                        case "Apodaca": position = 0; break;
+                        case "Cadereyta": position = 1; break;
+                        case "Escobedo": position = 2; break;
+                        case "García": position = 3; break;
+                        case "Guadalupe": position = 4; break;
+                        case "Juárez": position = 5; break;
+                        case "Monterrey": position = 6; break;
+                        case "Salinas Victoria": position = 7; break;
+                        case "San Nicolás de los Garza": position = 8; break;
+                        case "San Pedro Garza García": position = 9; break;
+                        case "Santa Catarina": position = 10; break;
+                        case "Santiago": position = 11; break;
+                        case "Allende": position = 12; break;
+                        case "Montemorelos": position = 13; break;
+                        case "Linares": position = 14; break;
+                        case "General Terán": position = 15; break;
+                        default:
+                            throw new IllegalStateException("Unexpected value: " + ciudad);
+                    }
+                    
+                    spinner.setSelection(position);
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        spinner.setOnItemSelectedListener(this);
     }// Fin on Create
 
     @Override
-    protected void onStart() {
-        super.onStart();
+    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+        zona = adapterView.getItemAtPosition(position).toString();
 
         FirebaseRecyclerAdapter<Usuario,UsuarioViewHolder>firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Usuario, UsuarioViewHolder>
-                (Usuario.class,R.layout.blog_row,UsuarioViewHolder.class,databaseReference.child("Usuario").orderByChild("profesion").startAt("")) {
+                (Usuario.class,R.layout.blog_row,UsuarioViewHolder.class,databaseReference.child("Usuario").orderByChild("zona").equalTo(zona)) {
             @Override
             protected void populateViewHolder(UsuarioViewHolder usuarioViewHolder, Usuario usuario, int i) {
 
@@ -122,22 +172,15 @@ public class InicioActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
-
-                /*
-                String idUser = usuario.getUid();
-                if (idUser == user.getUid()){
-                    usuarioViewHolder.mView.setVisibility(View.GONE);
-                    ViewGroup.LayoutParams params = usuarioViewHolder.mView.getLayoutParams();
-                    params.height = 0;
-                    params.width = 0;
-                    params.layoutAnimationParameters = null;
-                    usuarioViewHolder.mView.setLayoutParams(params);
-                }
-                 */
             }
         };
         mBlogList.setAdapter(firebaseRecyclerAdapter);
-    }// Fin onStart
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
 
     public static class UsuarioViewHolder extends RecyclerView.ViewHolder{
         View mView;

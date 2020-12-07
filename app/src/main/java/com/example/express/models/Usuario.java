@@ -10,7 +10,42 @@ public class Usuario {
     private String Descripcion;
     private String Imagen;
     private String Correo;
+    private int Votantes;
+    private float Suma;
+    private float Ratio;
+    private String Zona;
 
+    public String getZona() {
+        return Zona;
+    }
+
+    public void setZona(String zona) {
+        Zona = zona;
+    }
+
+    public int getVotantes() {
+        return Votantes;
+    }
+
+    public void setVotantes(int votantes) {
+        Votantes = votantes;
+    }
+
+    public float getSuma() {
+        return Suma;
+    }
+
+    public void setSuma(float suma) {
+        Suma = suma;
+    }
+
+    public float getRatio() {
+        return Ratio;
+    }
+
+    public void setRatio(float ratio) {
+        Ratio = ratio;
+    }
 
     public String getCorreo() {
         return Correo;

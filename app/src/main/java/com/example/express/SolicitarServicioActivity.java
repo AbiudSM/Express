@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.express.models.Usuario;
@@ -20,7 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 import java.util.UUID;
 
-public class SolicitarServicioActivity extends AppCompatActivity {
+public class SolicitarServicioActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     ImageView avanzar;
     EditText userNombre, userTelefono;
@@ -28,6 +31,7 @@ public class SolicitarServicioActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    String zona;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +60,12 @@ public class SolicitarServicioActivity extends AppCompatActivity {
                 }
             }
         });
+
+        Spinner spinner = findViewById(R.id.zona_spinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.zona, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
     }
 
     public boolean Validaciones(boolean band){
@@ -81,12 +91,30 @@ public class SolicitarServicioActivity extends AppCompatActivity {
         String telefono = userTelefono.getText().toString();
         String correo = user.getEmail();
 
+        float suma = (float) 0.0;
+        int votantes = 0;
+        float ratio = (float) 0.0;
+
         HashMap hashMap = new HashMap();
         hashMap.put("nombre",nombre);
         hashMap.put("telefono",telefono);
         hashMap.put("correo",correo);
         hashMap.put("uid",uid);
+        hashMap.put("zona",zona);
+        hashMap.put("suma",suma);
+        hashMap.put("votantes",votantes);
+        hashMap.put("ratio",ratio);
 
         databaseReference.child("Usuario").child(uid).setValue(hashMap);
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+        zona = adapterView.getItemAtPosition(position).toString();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }

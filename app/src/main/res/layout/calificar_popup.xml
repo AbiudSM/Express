@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:orientation="vertical"
+    android:layout_height="270dp"
+    android:padding="5dp"
+    android:layout_gravity="center"
+    android:background="#FFEB93">
+
+    <ImageView
+        android:id="@+id/close_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_close"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:text="@string/Calificar_trabajador"
+        android:textColor="#2E2E2E"
+        android:textSize="30sp" />
+    
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <RatingBar
+        android:id="@+id/barra_calificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="0"
+        android:layout_gravity="center"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+
+    <Button
+        android:id="@+id/btn_enviar_calificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="@string/Enviar"
+        android:background="@drawable/btn3"/>
+</LinearLayout>

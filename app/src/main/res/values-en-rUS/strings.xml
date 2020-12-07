@@ -69,4 +69,7 @@
     <string name="Debe_llenar_los_espacios_obligatorios">You must fill in the required spaces</string>
     <string name="Error_al_autenticar_su_cuenta">Error authenticating your account, please enter an existing email</string>
     <string name="Las_contraseñas_no_coinciden">Passwords do not match</string>
+    <string name="Calificar_trabajador">Rate worker</string>
+    <string name="Enviar">Send</string>
+    <string name="Zona">"Area: "</string>
 </resources>

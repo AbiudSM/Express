@@ -1,6 +1,27 @@
 <resources>
     <string name="app_name">Express</string>
     <!-- TODO: Remove or change this placeholder text -->
+
+    <string-array name="zona">
+        <item>Apodaca</item>
+        <item>Cadereyta</item>
+        <item>Escobedo</item>
+        <item>García</item>
+        <item>Guadalupe</item>
+        <item>Juárez</item>
+        <item>Monterrey</item>
+        <item>Salinas Victoria</item>
+        <item>San Nicolás de los Garza</item>
+        <item>San Pedro Garza García</item>
+        <item>Santa Catarina</item>
+        <item>Santiago</item>
+        <item>Allende</item>
+        <item>Montemorelos</item>
+        <item>Linares</item>
+        <item>General Terán</item>
+
+    </string-array>
+
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="te_damos_la_bienvenida">¡Te damos la bienvenida!</string>
     <string name="que_es_lo_que_buscas">¿Qué es lo que buscas?</string>
@@ -70,4 +91,7 @@
     <string name="Debe_llenar_los_espacios_obligatorios">Debe llenar los espacios obligatorios</string>
     <string name="Error_al_autenticar_su_cuenta">Error al autenticar su cuenta, favor de ingresar un correo existente</string>
     <string name="Las_contraseñas_no_coinciden">Las contraseñas no coinciden</string>
+    <string name="Calificar_trabajador">Calificar trabajador</string>
+    <string name="Enviar">Enviar</string>
+    <string name="Zona">"Zona: "</string>
 </resources>
